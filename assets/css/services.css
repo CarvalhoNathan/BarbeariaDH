@@ -1,0 +1,42 @@
+main{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card{
+    height: 350px; 
+    border-radius: 30px;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+}
+
+figure *{
+    text-align:center;
+    color: #F5FAFB;
+    margin: 5px 50px;
+}
+
+.cardbot{
+    display: block;
+    background-color: #08370B;
+    color: #F5FAFB;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.cardbot:hover{
+    background-color: #0b470f;
+}

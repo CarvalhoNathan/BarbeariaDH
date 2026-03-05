@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Roman&display=swap');
+
+*{margin: 0;}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+    max-width: 900px;
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header, .div1, div>section>h2 {
+    flex-basis: 100%;
+}
+
+header{
+    margin:15px;
+}
+
+nav>ul{
+    list-style:none;
+    display:flex;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    color: #F5FAFB;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #e7edee;
+    text-decoration: underline;
+}
+
+#logo{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image:url(../img/dh-white.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+main, figure img, div section, blockquote, #botao{
+    border-radius: 20px;
+}
+
+main{
+    font-family: "Luxurious Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #08370B;
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    max-height: 440px
+}
+
+main h1, div>section, aside{
+    color: #F5FAFB;
+    font-weight: normal;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #F97F2C;
+    font-weight: normal;
+} 
+
+.div2 img{
+    margin: 10px 50px;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 180px 60px 180px;
+    gap: 10px;
+    width: fit-content;
+}
+
+figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+#img1{
+    grid-column: 1;
+    grid-row: 1 / 2;
+}
+
+#img2{
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+#img3{
+    grid-column: 1;
+    grid-row: 2 / 4;
+}
+
+#img4{
+    grid-column: 2;
+    grid-row: 3 / 4;
+}
+
+div section{
+    background-color: #08370B;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+blockquote{
+    background-color: #0E2610;
+    flex: 1;
+    padding: 10px;
+    align-content: center;
+}
+
+#botao {
+    display: block;
+    justify-self: center;
+    margin: 20px;
+    background-color: #F97F2C;
+    color: #F5FAFB;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#botao:hover{
+    background-color: #df6f25;
+}
+
+.select{
+    text-decoration: underline;
+    text-decoration-color: #0c5811;
+    text-decoration-thickness: 5px;
+}

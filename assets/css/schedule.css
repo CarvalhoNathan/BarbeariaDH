@@ -1,0 +1,58 @@
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: #f8fcfd;
+    border-radius: 20px;
+    overflow: hidden;
+    align-content: center;
+    border: solid #f8fcfd;
+}
+
+figure{
+    flex: 0.8;
+    padding: 0;
+}
+
+
+form {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:start;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: -5px;
+}
+
+input, select{
+    background-color: #d4d4d4;
+    border: none;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+input:focus, select:focus {
+    background-color: #d1d1d1;
+}
+button{
+    display: block;
+    justify-self: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #F97F2C;
+    color: #F5FAFB;
+    padding: 20px 0;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+}
+
+button:hover{
+    background-color: #df6f25;
+}

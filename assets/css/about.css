@@ -1,0 +1,15 @@
+main{
+    color: #F5FAFB;
+    padding: 30px;
+    flex: 2.5;
+}
+
+#botao{
+    background-color: #0E2610;
+    color: #F5FAFB;
+}
+
+figure{
+    flex:1.5;
+}
+

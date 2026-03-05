@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Barbearia DH Gentlemen</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/schedule.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="services.html">Serviços</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
+                <li><a href="index.html" id="logo">Início</a></li>
+                <li><a href="#" class="select">Agenda</a></li>
+                <li><a href="location.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <figure>
+            <img src="assets/img/mirror.jpg">
+        </figure>
+
+        <form action="success.html">
+
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Escreva seu nome aqui!">
+
+            <label for="servico">Tipo de serviço:</label>
+            <select id="servico" name="servico" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="masculino">Corte Masculino</option>
+                <option value="barba">Corte + Barba</option>
+                <option value="feminino">Corte Feminino</option>
+            </select>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="13 12345-6789">
+
+            <label for="data">Quando deseja agendar?</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="horario">Escolha o seu horário:</label>
+            <select id="horario" name="horario" style="width: 120px;" required>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+            </select>
+
+            <button type="submit" #botao>AGENDAR</button>
+        </form>
+    </main>
+</body>
