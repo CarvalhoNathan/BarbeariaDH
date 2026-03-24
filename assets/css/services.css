@@ -8,10 +8,16 @@ main{
     padding: 20px;
 }
 
+.section-title {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    text-align: center;
+}
 .card{
+    position: relative;
     height: 350px; 
     border-radius: 30px;
-    border: 2px solid white;
+    border: 2px solid #FFFFFF;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,10 +27,34 @@ main{
     overflow: hidden;
 }
 
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.card h2,
+.card a.cardbot,
+.card p {
+    position: relative;
+    z-index: 2;
+}
+
 figure *{
     text-align:center;
-    color: #F5FAFB;
+    color: #FFFFFF;
     margin: 5px 50px;
+}
+
+.card h2 {
+    text-shadow: 0 0 8px rgba(0,0,0,0.75);
+}
+
+.cardbot {
+    background-color: rgba(8, 55, 11, 0.95);
+    border: 1px solid #FFFFFF;
 }
 
 .cardbot{

@@ -41,15 +41,64 @@ nav>ul {
 }
 
 nav a {
-    color: #F5FAFB;
+    color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #e7edee;
+    color: #FFFFFF;
     text-decoration: underline;
+}
+
+body,
+main,
+#main-content,
+section,
+article,
+address,
+p,
+label,
+input,
+select,
+button,
+textarea,
+li {
+    color: #FFFFFF;
+}
+
+label,
+input,
+select,
+button,
+textarea {
+    font-size: 1rem;
+}
+
+.section-title,
+main h1 {
+    text-align: center;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.section-subtitle {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    color: #F5FAFB;
+}
+
+main h2,
+main h3,
+main p,
+address,
+strong {
+    color: #FFFFFF;
 }
 
 #logo {
@@ -61,6 +110,30 @@ nav a:hover {
     background-repeat: no-repeat;
     background-position: center;
     text-indent: -9999px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    background: #08370B;
+    color: #F5FAFB;
+    padding: 0.5rem 0.75rem;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
+
+a:focus,
+button:focus,
+select:focus,
+input:focus {
+    outline: 3px solid #F97F2C;
+    outline-offset: 2px;
 }
 
 main,
