@@ -1,11 +1,22 @@
+:root {
+    --color-text-light: #f5f5f5;
+    --color-text-lighter: #f5fafb;
+    --color-primary-bg: #08370b;
+    --color-surface: #f8fcfd;
+    --color-input: #d4d4d4;
+    --color-input-focus: #d1d1d1;
+    --color-accent: #f97f2c;
+    --color-action-hover: #df6f25;
+}
+
 main{
     display: flex;
     flex-direction: row;
-    background-color: #f8fcfd;
+    background-color: var(--color-surface);
     border-radius: 20px;
     overflow: hidden;
     align-content: center;
-    border: solid #f8fcfd;
+    border: solid var(--color-surface);
 }
 
 figure{
@@ -31,22 +42,22 @@ label {
 }
 
 input, select{
-    background-color: #d4d4d4;
+    background-color: var(--color-input);
     border: none;
     border-radius: 20px;
     padding: 3px;
 }
 
 input:focus, select:focus {
-    background-color: #d1d1d1;
+    background-color: var(--color-input-focus);
 }
 button{
     display: block;
     justify-self: center;
     border-radius: 20px;
     margin: 20px;
-    background-color: #F97F2C;
-    color: #F5FAFB;
+    background-color: var(--color-accent);
+    color: var(--color-text-lighter);
     padding: 20px 0;
     font-weight: bold;
     transition: 0.3s;
@@ -54,5 +65,5 @@ button{
 }
 
 button:hover{
-    background-color: #df6f25;
+    background-color: var(--color-action-hover);
 }
