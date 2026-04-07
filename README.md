@@ -28,23 +28,20 @@ Estas são as bases do site. Sem isso, o site não funciona corretamente para o 
 
 - [x] **HTML Semântico:** Estruturar o documento corretamente (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) para que os robôs de busca e leitores de tela entendam a página.
 - [ ] **Responsividade (Mobile-First):** O site deve funcionar perfeitamente em telas pequenas. Implementar o menu hambúrguer com atributos corretos (`aria-expanded`).
-- [ ] **Configuração de Cores e Contraste:** Ajustar os tons de verde e dourado para garantir que passem na validação de contraste do WAVE (mínimo 4.5:1).
-- [ ] **Embed do Agendamento Oficial:** Integrar o iframe do sistema atual de reservas da barbearia, garantindo a inclusão do atributo `title` no iframe para leitura acessível.
+- [x] **Configuração de Cores e Contraste:** Ajustar os tons de verde e dourado para garantir que passem na validação de contraste do WAVE (mínimo 4.5:1).
 
 ### 🟡 Média Prioridade (Boas Práticas e Qualidade de Código)
 Estas implementações elevam o nível técnico do projeto e melhoram muito a experiência do usuário (UX).
 
-- [ ] **Variáveis CSS (Custom Properties):** Estruturar a paleta de cores usando o `:root` do CSS para facilitar a manutenção e preparar o terreno para um futuro botão de "Alto Contraste".
+- [x] **Variáveis CSS (Custom Properties):** Estruturar a paleta de cores usando o `:root` do CSS para facilitar a manutenção e preparar o terreno para um futuro botão de "Alto Contraste".
 - [x] **Link "Skip to Content" (Pular para o conteúdo):** Criar um link invisível no topo da página que só aparece ao navegar com a tecla `Tab`, permitindo ao usuário pular o cabeçalho.
-- [ ] **Focus States Visíveis (Navegação por teclado):** Garantir que todos os links e botões tenham um `outline` claro quando navegados via teclado.
+- [x] **Focus States Visíveis (Navegação por teclado):** Garantir que todos os links e botões tenham um `outline` claro quando navegados via teclado.
 - [x] **Embed do Google Maps (Localização):** Inserir o mapa na seção de contato com o respectivo atributo `title` para validação no WAVE.
 
 ### 🟢 Baixa Prioridade (Melhorias de Conversão e Detalhes)
 Funcionalidades extras que agregam valor ao negócio do cliente, mas podem ser feitas após a estrutura principal estar 100% pronta.
 
 - [ ] **Textos Alternativos (Alt Text):** Preencher detalhadamente as descrições nas imagens do portfólio de cortes.
-- [ ] **Botão Flutuante do WhatsApp:** Adicionar um CTA secundário fixo na tela para dúvidas rápidas, configurado com a tag `aria-label="Fale conosco no WhatsApp"`.
-- [ ] **Menu de Acessibilidade Visual:** Criar opções na UI para aumentar a fonte ou alternar paletas, caso necessário.
 
 ---
 
