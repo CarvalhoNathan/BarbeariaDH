@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Roman&display=swap');
+
 :root {
     --color-text-light: #f5f5f5;
     --color-text-lighter: #f5fafb;
@@ -5,10 +7,27 @@
     --color-primary-bg-dark: #0e2610;
 }
 
-main{
-    color: var(--color-text-lighter);
-    padding: 30px;
-    flex: 2.5;
+/* No seu schedule.css */
+
+main {
+    display: flex;
+    flex-direction: column; /* Para o formulário ficar abaixo de qualquer outro elemento interno */
+    align-items: center;
+    justify-content: center;
+    min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 40px 20px;
+    margin: 20px auto;
+}
+
+form {
+    width: 100%;
+    max-width: 500px; /* Mantém o formulário com uma largura elegante */
+    z-index: 5;
+}
+
+#botao {
+    position: relative; /* Garante que o botão respeite o fluxo do formulário */
+    z-index: 10;
 }
 
 #botao{
@@ -16,19 +35,41 @@ main{
     color: var(--color-text-lighter);
 }
 
-figure{
-    flex:1.5;
+figure {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+figure img {
+    max-width: 100%; /* Garante que a imagem não vaze para os lados */
+    height: auto;
+    border-radius: 20px;
+}
+
+#botao {
+    width: fit-content; /* O botão se ajusta ao tamanho do texto */
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    body {
+        flex-direction: row; /* Volta a ficar lado a lado no PC */
+        align-items: flex-start;
+    }
+
     main {
-        padding: 15px;
-        flex-direction: column;
+        flex: 1.5;
+        padding: 40px;
     }
 
     figure {
         flex: 1;
+        padding: 40px;
     }
 }
 
