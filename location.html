@@ -64,12 +64,16 @@
 
     <header>
         <nav>
-            <ul>
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="hamburger" aria-label="Abrir menu de navegação">☰</label>
+            <ul class="left">
                 <li><a href="services.html">Serviços</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="index.html" id="logo">Início</a></li>
+            </ul>
+            <a href="index.html" class="nav-logo">Início</a>
+            <ul class="right">
                 <li><a href="schedule.html">Agenda</a></li>
-                <li><a href="#" class="select">Localização</a></li>
+                <li><a href="location.html" class="select">Localização</a></li>
             </ul>
         </nav>
     </header>

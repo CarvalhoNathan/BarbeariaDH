@@ -20,3 +20,15 @@ figure{
     flex:1.5;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    figure {
+        flex: 1;
+    }
+}
+

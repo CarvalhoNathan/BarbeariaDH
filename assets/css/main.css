@@ -11,6 +11,7 @@
     --color-action: #e26918;
     --color-action-hover: #d85600;
     --color-link-focus: #0e6814;
+    --color-action-accessible: #A54800;
 }
 
 * {
@@ -42,9 +43,19 @@ div>section>h2 {
 
 header {
     margin: 15px;
+    flex-basis: 100%;
+    width: 100%;
 }
 
-nav>ul {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+nav > ul {
     list-style: none;
     display: flex;
     column-gap: 50px;
@@ -52,6 +63,34 @@ nav>ul {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+/* Hamburger menu */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text-light);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.left, .right {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    display: block;
 }
 
 nav a {
@@ -131,6 +170,21 @@ strong {
     text-indent: -9999px;
 }
 
+.nav-logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/logo-dh-branco.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    color: var(--color-text-light);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 .skip-link {
     position: absolute;
     left: -999px;
@@ -166,7 +220,8 @@ main {
     align-items: center;
     justify-content: center;
     padding: 0;
-    max-height: 440px
+    max-height: 440px;
+    margin: 0;
 }
 
 main h1,
@@ -243,7 +298,7 @@ blockquote {
     display: block;
     justify-self: center;
     margin: 20px;
-    background-color: var(--color-action);
+    background-color: var(--color-action-hover);
     color: var(--color-text-lighter);
     padding: 20px 30px;
     text-decoration: none;
@@ -251,11 +306,136 @@ blockquote {
 }
 
 #botao:hover {
-    background-color: var(--color-action-hover);
+    background-color: var(--color-action-accessible);
 }
 
 .select {
     text-decoration: underline;
     text-decoration-color: var(--color-link-focus);
     text-decoration-thickness: 3px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    header {
+        margin: 10px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav .left,
+    nav .right {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        background-color: var(--color-primary-bg);
+        padding: 20px;
+        z-index: 1001;
+        width: 200px;
+    }
+
+    nav .left {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    nav .right {
+        border-radius: 0px 0px 15px 15px;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #menu-toggle:checked ~ .left,
+    #menu-toggle:checked ~ a ~ .right {
+        display: flex;
+    }
+
+    #menu-toggle:checked ~ a ~ .right {
+        top: 140px;
+    }
+
+    .nav-logo {
+        display: block;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #img1, #img2, #img3, #img4 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 250px;
+    }
+
+    .galeria figure img {
+        height: 150px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+
+    div section {
+        padding: 20px;
+    }
+
+    .div2 img {
+        margin: 10px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .galeria {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 50px 150px;
+    }
+}
+
+/* Desktop - Navbar em linha horizontal */
+@media (min-width: 1025px) {
+    nav {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .left,
+    nav .right {
+        display: flex;
+    }
+
+    .nav-logo {
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
 }

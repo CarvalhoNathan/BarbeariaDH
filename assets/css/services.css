@@ -82,3 +82,26 @@ figure *{
 .cardbot:hover{
     background-color: var(--color-primary-bg-dark);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
