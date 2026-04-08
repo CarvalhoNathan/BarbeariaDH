@@ -48,32 +48,41 @@
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" required placeholder="13 12345-6789">
 
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+
             <label for="data">Quando deseja agendar?</label>
             <input type="date" id="data" name="data" required>
 
             <label for="horario">Escolha o seu horário:</label>
-            <select id="horario" name="horario" style="width: 120px;" required>
-                <option value="10:00">10:00</option>
-                <option value="10:30">10:30</option>
-                <option value="11:00">11:00</option>
-                <option value="11:30">11:30</option>
-                <option value="12:00">12:00</option>
-                <option value="12:30">12:30</option>
-                <option value="13:00">13:00</option>
-                <option value="13:30">13:30</option>
-                <option value="14:00">14:00</option>
-                <option value="14:30">14:30</option>
-                <option value="15:00">15:00</option>
-                <option value="15:30">15:30</option>
-                <option value="16:00">16:00</option>
-                <option value="16:30">16:30</option>
-                <option value="17:00">17:00</option>
-                <option value="17:30">17:30</option>
-                <option value="18:00">18:00</option>
-                <option value="18:30">18:30</option>
-                <option value="19:00">19:00</option>
-                <option value="19:30">19:30</option>
-            </select>
+            <select id="horario" name="horario" style="width: 120px;" required></select>
+
+            <script>
+                const selectHorario = document.getElementById('horario');
+                for (let h = 10; h <= 19; h++) {
+                    ['00', '30'].forEach(m => selectHorario.add(new Option(`${h}:${m}`, `${h}:${m}`)));
+                }
+
+                const inputTelefone = document.getElementById('telefone');
+                inputTelefone.addEventListener('input', function (e) {
+                    let valor = e.target.value.replace(/\D/g, ''); 
+                    valor = valor.substring(0, 11);                  
+                    let formatado = '';
+                    if (valor.length > 0) {
+                        formatado = '(' + valor;
+                    }
+                    if (valor.length > 2) {
+                        formatado = '(' + valor.substring(0, 2) + ') ' + valor.substring(2);
+                    }
+                    if (valor.length > 7) {
+                        formatado = '(' + valor.substring(0, 2) + ') ' + valor.substring(2, 7) + '-' + valor.substring(7);
+                    }
+                    e.target.value = formatado;
+                });
+            </script>
+
+            <label for="observacao">Alguma observação? (Opcional)</label>
+            <textarea id="observacao" name="observacao" rows="3" style="width: 100%" placeholder="Ex: Quero disfarçado, cortar só na tesoura, tenho alergia a gilete..."></textarea>
 
             <button type="submit" id="botao">AGENDAR</button>
         </form>

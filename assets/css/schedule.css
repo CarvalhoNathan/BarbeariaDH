@@ -15,10 +15,10 @@ main {
     background-color: var(--color-surface);
     border-radius: 20px;
     overflow: hidden;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     border: 2px solid var(--color-surface);
-    min-height: 500px;
+    min-height: 670px;
 }
 
 figure {
@@ -45,12 +45,12 @@ form {
 }
 
 label {
-    color: var(--color-text-light);
+    color: #000;
     font-weight: bold;
     font-size: 14px;
 }
 
-input, select {
+input, select, textarea {
     background-color: #e0e0e0;
     border: 1px solid #ccc;
     border-radius: 10px;
