@@ -27,7 +27,7 @@ Para otimizar o fluxo de trabalho da equipe, as tarefas de implementação foram
 Estas são as bases do site. Sem isso, o site não funciona corretamente para o cliente final nem passa nos testes básicos de acessibilidade.
 
 - [x] **HTML Semântico:** Estruturar o documento corretamente (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) para que os robôs de busca e leitores de tela entendam a página.
-- [ ] **Responsividade (Mobile-First):** O site deve funcionar perfeitamente em telas pequenas. Implementar o menu hambúrguer com atributos corretos (`aria-expanded`).
+- [x] **Responsividade (Mobile-First):** O site deve funcionar perfeitamente em telas pequenas. Implementar o menu hambúrguer com atributos corretos (`aria-expanded`).
 - [x] **Configuração de Cores e Contraste:** Ajustar os tons de verde e dourado para garantir que passem na validação de contraste do WAVE (mínimo 4.5:1).
 
 ### 🟡 Média Prioridade (Boas Práticas e Qualidade de Código)
