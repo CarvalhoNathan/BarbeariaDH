@@ -2,6 +2,8 @@
 
 Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, e com foco total na implementação de **acessibilidade digital (A11Y)**.
 
+![Screenshot da página inicial](./assets/img/print-home.png)
+
 ## 📑 Sumário
 - [🎯 Objetivos do Projeto](#-objetivos-do-projeto)
 - [🎨 UI/UX Design](#-uiux-design-verde-escuro--laranja)
@@ -26,6 +28,8 @@ As escolhas visuais foram baseadas na fachada física da barbearia, misturando o
 
 ## ♿ Acessibilidade e Qualidade
 O desenvolvimento deste site foi totalmente guiado e validado garantindo que o código final atenda aos padrões exigidos pela **WCAG**. A navegação inclusiva foi garantida por meio de testes usando relatórios do **WAVE** e do **AccessMonitor**.
+
+![Relatório de 100% de Acessibilidade no WAVE](./assets/img/print-relatorio-wave.png)
 
 ---
 
