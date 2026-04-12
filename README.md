@@ -1,6 +1,16 @@
 # 💈 Barbearia DH Gentlemen Club
 
-Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, com foco total na implementação de **acessibilidade digital (A11Y)**.
+Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, e com foco total na implementação de **acessibilidade digital (A11Y)**.
+
+## 📑 Sumário
+- [🎯 Objetivos do Projeto](#-objetivos-do-projeto)
+- [🎨 UI/UX Design](#-uiux-design-verde-escuro--laranja)
+- [♿ Acessibilidade e Qualidade](#-acessibilidade-e-qualidade)
+- [🚀 Como Executar o Projeto](#-como-executar-o-projeto-localmente)
+- [🗺️ Roadmap Concluído](#️-etapas-concluídas-roadmap-de-desenvolvimento)
+- [🛠️ Ferramentas Utilizadas](#️-ferramentas-utilizadas)
+
+---
 
 ## 🎯 Objetivos do Projeto
 
@@ -51,9 +61,9 @@ Este é um projeto estático e nativo em HTML/CSS/JS, não requer frameworks pes
 ---
 
 ## 🛠️ Ferramentas Utilizadas
-* **Figma:** Wireframing e Prototipação UI/UX.
-* **WAVE (WebAIM):** Testes profundos e validação de acessibilidade digital.
-* **AccessMonitor:** Testes em português e validação restrita de acessibilidade.
+* **[Figma](https://www.figma.com/):** Wireframing e Prototipação UI/UX.
+* **[WAVE (WebAIM)](https://wave.webaim.org/):** Testes profundos e validação de acessibilidade digital.
+* **[AccessMonitor](https://accessmonitor.acessibilidade.gov.pt/):** Testes em português e validação restrita de acessibilidade.
 * **HTML5, CSS3, JS Vanilla:** Tecnologias adotadas pro Redesign.
 
 ---
