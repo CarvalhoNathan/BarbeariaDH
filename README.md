@@ -1,6 +1,7 @@
 # 💈 Barbearia DH Gentlemen Club
 
 > **Status do Projeto:** ✅ Acessibilidade (A11Y) e Redesign Concluídos
+> 🔗 **Acesso Rápido:** [Clique aqui para acessar o projeto online](#) *(insira seu link do GitHub Pages/Vercel aqui)*
 
 Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, com foco total na implementação de **acessibilidade digital (A11Y)**.
 
@@ -17,7 +18,7 @@ As escolhas visuais foram baseadas na fachada física da barbearia, misturando o
 * **Call to Action (CTA):** Laranja Vibrante Acessível (`#FF6600`).
 
 ## ♿ Acessibilidade e Qualidade
-O desenvolvimento deste site foi totalmente guiado e validado garantindo que o código final atenda aos padrões exigidos pela **WCAG**. A navegação inclusiva foi garantida por meio de testes usando relatórios do **WAVE** e do **AcessMonitor**.
+O desenvolvimento deste site foi totalmente guiado e validado garantindo que o código final atenda aos padrões exigidos pela **WCAG**. A navegação inclusiva foi garantida por meio de testes usando relatórios do **WAVE** e do **AccessMonitor**.
 
 ---
 
@@ -41,10 +42,21 @@ Nesta versão final de entrega, todas as tarefas de implementação e ajustes do
 
 ---
 
+## 🚀 Como Executar o Projeto Localmente
+
+Este é um projeto estático e nativo em HTML/CSS/JS, não requer frameworks pesados ou instalação de pacotes via terminal.
+
+1. Faça o clone deste repositório ou baixe os arquivos em formato compacto (`.zip`).
+2. Extraia os arquivos (se necessário) e navegue até a pasta principal do projeto.
+3. Dê duplo clique no arquivo `index.html` para abri-lo de forma imediata no seu navegador padrão.
+   *Dica: Ou abra a pasta em uma IDE (como o VS Code) e utilize a extensão **Live Server** para testar as alterações de código com carregamento automático ("Hot Reload").*
+
+---
+
 ## 🛠️ Ferramentas Utilizadas
 * **Figma:** Wireframing e Prototipação UI/UX.
 * **WAVE (WebAIM):** Testes profundos e validação de acessibilidade digital.
-* **AcessMonitor:** Testes em português e validação restrita de acessibilidade.
+* **AccessMonitor:** Testes em português e validação restrita de acessibilidade.
 * **HTML5, CSS3, JS Vanilla:** Tecnologias adotadas pro Redesign.
 
 ---
