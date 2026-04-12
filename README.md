@@ -1,54 +1,51 @@
-# 💈 Barbearia DH Gentlemen Club - Website Redesign
+# 💈 Barbearia DH Gentlemen Club
 
-> **Status do Projeto:** Em desenvolvimento 🚧 (Fase de Planejamento Técnico e Acessibilidade)
+> **Status do Projeto:** ✅ Acessibilidade (A11Y) e Redesign Concluídos
 
-Este projeto é um trabalho acadêmico de redesenho (redesign) da interface web para a barbearia **DH Gentlemen Club**. O objetivo principal é modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca.
+Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, com foco total na implementação de **acessibilidade digital (A11Y)**.
 
-## 🎯 Objetivo do Projeto
-Criar uma landing page focada em conversão (agendamento de cortes), transmitindo a atmosfera clássica e premium da barbearia através de um design limpo, totalmente responsivo e com alto rigor de acessibilidade digital (A11Y).
+## 🎯 Objetivos do Projeto
 
-## 🎨 UI/UX Design (Regal Green & Brass)
+- **Landing Page Focada em Conversão:** Criar uma estrutura focada em agendamento de cortes, transmitindo a atmosfera clássica e premium da barbearia através de um design limpo e totalmente responsivo.
+- **Acessibilidade Digital (A11Y):** Implementar e garantir que o site seja acessível para todos os usuários, incluindo pessoas com deficiência física ou visual, atendendo às mais rigorosas validações de acessibilidade.
+
+## 🎨 UI/UX Design (Verde Escuro & Laranja)
 As escolhas visuais foram baseadas na fachada física da barbearia, misturando o estilo *Vintage/Clássico* com uma navegação moderna.
-* **Tipografia:** Fonte **Inter** (foco em legibilidade e limpeza visual).
-* **Fundo e Base:** Preto Carvão (`#1A1A1A`) e Verde Militar (`#304430`).
-* **Destaques e Textos:** Dourado Antigo (`#D4AF37`) e Branco Sujo (`#F5F5F5`).
-* **Call to Action (CTA):** Vermelho Queimado (`#A52A2A`).
+* **Tipografia:** Fontes **Inter** e **Luxurious Roman**.
+* **Fundo e Base:** Preto (`#000000`) e tons de Verde Escuro (`#08370B`, `#102B13`).
+* **Destaques e Textos:** Laranja (`#F97F2C`) e Branco / Off-White (`#F5F5F5`, `#F5FAFB`).
+* **Call to Action (CTA):** Laranja Vibrante Acessível (`#FF6600`).
 
-## ♿ Acessibilidade e Qualidade (Ferramenta: WAVE)
-O desenvolvimento deste site está sendo guiado e validado através da extensão **WAVE (Web Accessibility Evaluation Tool)**, garantindo que o código final atenda aos padrões da WCAG, oferecendo navegação inclusiva para todos os usuários.
+## ♿ Acessibilidade e Qualidade
+O desenvolvimento deste site foi totalmente guiado e validado garantindo que o código final atenda aos padrões exigidos pela **WCAG**. A navegação inclusiva foi garantida por meio de testes usando relatórios do **WAVE** e do **AcessMonitor**.
 
 ---
 
-## 🗺️ Roadmap e Priorização de Desenvolvimento
+## 🗺️ Etapas Concluídas (Roadmap de Desenvolvimento)
 
-Para otimizar o fluxo de trabalho da equipe, as tarefas de implementação foram divididas por ordem de criticidade técnica e valor para o cliente.
+Nesta versão final de entrega, todas as tarefas de implementação e ajustes do código focadas em acessibilidade foram validadas e concluídas com sucesso:
 
-### 🔴 Alta Prioridade (Obrigatório para o Core do Projeto)
-Estas são as bases do site. Sem isso, o site não funciona corretamente para o cliente final nem passa nos testes básicos de acessibilidade.
-
-- [x] **HTML Semântico:** Estruturar o documento corretamente (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) para que os robôs de busca e leitores de tela entendam a página.
-- [x] **Responsividade (Mobile-First):** O site deve funcionar perfeitamente em telas pequenas. Implementar o menu hambúrguer com atributos corretos (`aria-expanded`).
-- [x] **Configuração de Cores e Contraste:** Ajustar os tons de verde e dourado para garantir que passem na validação de contraste do WAVE (mínimo 4.5:1).
+### 🔴 Alta Prioridade (Core do Projeto)
+- [x] **HTML Semântico:** Estruturação correta do documento (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) para perfeita compreensão de robôs de busca e leitores de tela.
+- [x] **Responsividade (Mobile-First):** Funcionamento perfeito em telas pequenas, incluindo um menu responsivo agora com interatividade nativa via teclado e controle real de estado (`aria-expanded`).
+- [x] **Contraste Acessível:** Ajuste assertivo e definitivo dos tons de verde e laranja para garantir aprovação na validação de contraste (mínimo 4.5:1).
 
 ### 🟡 Média Prioridade (Boas Práticas e Qualidade de Código)
-Estas implementações elevam o nível técnico do projeto e melhoram muito a experiência do usuário (UX).
-
-- [x] **Variáveis CSS (Custom Properties):** Estruturar a paleta de cores usando o `:root` do CSS para facilitar a manutenção e preparar o terreno para um futuro botão de "Alto Contraste".
-- [x] **Link "Skip to Content" (Pular para o conteúdo):** Criar um link invisível no topo da página que só aparece ao navegar com a tecla `Tab`, permitindo ao usuário pular o cabeçalho.
-- [x] **Focus States Visíveis (Navegação por teclado):** Garantir que todos os links e botões tenham um `outline` claro quando navegados via teclado.
-- [x] **Embed do Google Maps (Localização):** Inserir o mapa na seção de contato com o respectivo atributo `title` para validação no WAVE.
+- [x] **Variáveis CSS (Custom Properties):** Paleta de cores padronizada via `:root` do CSS para facilitar a escalabilidade.
+- [x] **Link "Skip to Content" (Pular para o conteúdo):** Criação de atalho invisível no topo da página focado em agilizar a navegação de quem usa teclado.
+- [x] **Focus States Visíveis e Nítidos:** Implementação de `outline` sob medida (Laranja) e regras de `:focus-visible` em todos os links e botões para os usuários de acessibilidade motora.
+- [x] **Embed do Google Maps Acessível:** Uso correto do atributo `title` no iFrame de localização.
 
 ### 🟢 Baixa Prioridade (Melhorias de Conversão e Detalhes)
-Funcionalidades extras que agregam valor ao negócio do cliente, mas podem ser feitas após a estrutura principal estar 100% pronta.
-
-- [x] **Textos Alternativos (Alt Text):** Preencher detalhadamente as descrições nas imagens do portfólio de cortes.
+- [x] **Textos Alternativos e Descritivos:** Inclusão detalhada de textos alternativos (`alt`) nas imagens (`<img>`) e inserção semântica de atributos (`aria-label`) para contextualizar links focados em ações ("Agendar" e "Comprar").
 
 ---
 
 ## 🛠️ Ferramentas Utilizadas
 * **Figma:** Wireframing e Prototipação UI/UX.
-* **WAVE (WebAIM):** Testes e validação de acessibilidade.
-* **HTML5, CSS3, JavaScript** (Desenvolvimento Front-end).
+* **WAVE (WebAIM):** Testes profundos e validação de acessibilidade digital.
+* **AcessMonitor:** Testes em português e validação restrita de acessibilidade.
+* **HTML5, CSS3, JS Vanilla:** Tecnologias adotadas pro Redesign.
 
 ---
 *Projeto desenvolvido para fins acadêmicos.*
