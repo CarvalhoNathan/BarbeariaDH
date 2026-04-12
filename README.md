@@ -41,7 +41,7 @@ Estas implementações elevam o nível técnico do projeto e melhoram muito a ex
 ### 🟢 Baixa Prioridade (Melhorias de Conversão e Detalhes)
 Funcionalidades extras que agregam valor ao negócio do cliente, mas podem ser feitas após a estrutura principal estar 100% pronta.
 
-- [ ] **Textos Alternativos (Alt Text):** Preencher detalhadamente as descrições nas imagens do portfólio de cortes.
+- [x] **Textos Alternativos (Alt Text):** Preencher detalhadamente as descrições nas imagens do portfólio de cortes.
 
 ---
 
