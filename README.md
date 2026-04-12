@@ -1,8 +1,5 @@
 # 💈 Barbearia DH Gentlemen Club
 
-> **Status do Projeto:** ✅ Acessibilidade (A11Y) e Redesign Concluídos
-> 🔗 **Acesso Rápido:** [Clique aqui para acessar o projeto online](#) *(insira seu link do GitHub Pages/Vercel aqui)*
-
 Este projeto é um trabalho acadêmico de redesign da interface web para a **Barbearia DH Gentlemen Club**. O objetivo principal foi modernizar a presença digital do negócio, melhorando a experiência do usuário (UX) e a interface visual (UI), mantendo a essência e o logotipo original da marca, com foco total na implementação de **acessibilidade digital (A11Y)**.
 
 ## 🎯 Objetivos do Projeto
