@@ -61,7 +61,7 @@ nav {
     position: relative;
 }
 
-nav > ul {
+nav>ul {
     list-style: none;
     display: flex;
     column-gap: 50px;
@@ -86,7 +86,8 @@ nav > ul {
     padding: 0;
 }
 
-.left, .right {
+.left,
+.right {
     display: flex;
     gap: 50px;
     list-style: none;
@@ -113,16 +114,17 @@ nav a::after {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: var(--color-link-focus);
+    background-color: var(--color-accent);
     transition: all 0.4s ease-in-out;
     transform: translateX(-50%);
 }
 
 nav a:hover::after {
-    width: 100%; /* A linha cresce ao passar o mouse */
+    width: 100%;
+    /* A linha cresce ao passar o mouse */
 }
 
-.attribution{
+.attribution {
     color: var(--color-text-muted);
     margin-top: 6px;
 }
@@ -195,9 +197,10 @@ strong {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    text-indent: -9999px;
     transition: all 0.4s ease-in-out;
     filter: drop-shadow(0 0 0 rgba(249, 127, 44, 0));
+    color: transparent;
+    overflow: hidden;
 }
 
 .nav-logo:hover {
@@ -277,17 +280,22 @@ aside {
 }
 
 .galeria figure {
-    overflow: hidden; /* Garante que a imagem não saia da borda ao dar zoom */
-    border-radius: 14px; /* Mantém o padrão do projeto */
+    overflow: hidden;
+    /* Garante que a imagem não saia da borda ao dar zoom */
+    border-radius: 14px;
+    /* Mantém o padrão do projeto */
 }
 
 .galeria img {
-    transition: transform 0.5s ease; /* Transição suave de zoom */
+    transition: transform 0.5s ease;
+    /* Transição suave de zoom */
 }
 
 .galeria img:hover {
-    transform: scale(1.1); /* Aumenta 10% da imagem */
-    filter: brightness(1.1); /* Dá um leve brilho */
+    transform: scale(1.1);
+    /* Aumenta 10% da imagem */
+    filter: brightness(1.1);
+    /* Dá um leve brilho */
     cursor: pointer;
 }
 
@@ -378,6 +386,7 @@ blockquote {
     nav .left,
     nav .right {
         display: none;
+        visibility: hidden;
         flex-direction: column;
         gap: 20px;
         position: absolute;
@@ -399,11 +408,12 @@ blockquote {
     }
 
     nav.menu-open .left,
-    nav.menu-open a ~ .right {
+    nav.menu-open a~.right {
         display: flex;
+        visibility: visible;
     }
 
-    nav.menu-open a ~ .right {
+    nav.menu-open a~.right {
         top: 140px;
     }
 
@@ -419,7 +429,10 @@ blockquote {
         margin: 20px auto;
     }
 
-    #img1, #img2, #img3, #img4 {
+    #img1,
+    #img2,
+    #img3,
+    #img4 {
         grid-column: auto;
         grid-row: auto;
         height: 250px;
