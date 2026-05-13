@@ -69,6 +69,11 @@ input, select, textarea {
     border-radius: 10px;
 }
 
+.obrigatorio::after {
+    content: " *";
+    color: red;
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
