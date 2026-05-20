@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/acessibilidade.css">
 </head>
 
 <body>
@@ -56,5 +57,33 @@
         <img src="assets/img/barbeiro-cortando.jpg"
             alt="Foto do barbeiro Douglas de uniforme preto, posicionado no centro da barbearia com decoração rústica e com detalhes de uma janela com moldura em madeira ao fundo.">
     </figure>
+<div class="a11y-toolbar">
+        <button id="a11y-toggle" aria-expanded="false" aria-label="Abrir menu de acessibilidade">
+            ♿
+        </button>
+        <ul id="a11y-menu" class="a11y-menu hidden" role="menu">
+            <li><button id="btn-increase-font" role="menuitem">A+ Aumentar Fonte</button></li>
+            <li><button id="btn-decrease-font" role="menuitem">A- Diminuir Fonte</button></li>
+            <li><button id="btn-high-contrast" role="menuitem">◐ Alto Contraste</button></li>
+            <li><button id="btn-dark-mode" role="menuitem">🌙 Modo Escuro</button></li>
+            <li><button id="btn-highlight-links" role="menuitem">🔗 Destacar links</button></li>
+            <li><button id="btn-pause-animations" role="menuitem">⏸ Pausar animações</button></li>
+            <li><button id="btn-reset" role="menuitem">🔄 Resetar</button></li>
+        </ul>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <script src="assets/js/a11y.js"></script>
+    
+    <script src="assets/js/acessibilidade.js"></script>
 </body>

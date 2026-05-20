@@ -1,0 +1,150 @@
+/* =========================================
+   ESTILOS DA BARRA DE ACESSIBILIDADE
+   ========================================= */
+
+/* Transição base para o tamanho da fonte */
+html {
+    transition: font-size 0.3s ease;
+}
+
+.a11y-toolbar {
+    position: fixed;
+    /* Muda do lado esquerdo para o lado direito */
+    right: 15px; 
+    
+    /* O VLibras fica em 50% da altura da tela. 
+       Usamos calc() para subir o botão o suficiente para ficar logo acima dele. */
+    top: calc(50% - 60px); 
+    
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    /* Alinha o botão flutuante e o menu à direita */
+    align-items: flex-end; 
+}
+
+#a11y-toggle {
+    background-color: var(--color-action); /* Usa a variável que já existe no seu main.css */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+#a11y-toggle:hover {
+    background-color: var(--color-action-hover);
+}
+
+.a11y-menu {
+    list-style: none;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    
+    /* Mantém o menu abrindo para cima */
+    bottom: 60px;
+    
+    /* Trava o menu na direita para ele não vazar da tela */
+    right: 0; 
+    width: 200px;
+}
+
+.a11y-menu.hidden {
+    display: none;
+}
+
+.a11y-menu button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-image: url(../img/acessibilidade.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+    /* display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/logo-dh-branco.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; */
+
+.a11y-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* =========================================
+   CLASSES DE MODIFICAÇÃO DE ACESSIBILIDADE
+   ========================================= */
+
+/* Alto Contraste */
+body.high-contrast,
+body.high-contrast main,
+body.high-contrast header,
+body.high-contrast div section,
+body.high-contrast aside,
+body.high-contrast .a11y-menu {
+    background-color: #000000 !important;
+    color: #FFFF00 !important;
+    border-color: #FFFF00 !important;
+    background-image: none !important;
+}
+
+body.high-contrast * {
+    color: #FFFF00 !important;
+}
+
+/* Modo Escuro */
+body.dark-mode,
+body.dark-mode main,
+body.dark-mode div section,
+body.dark-mode aside,
+body.dark-mode .a11y-menu {
+    background-color: #121212 !important;
+    color: #E0E0E0 !important;
+    background-image: none !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: #E0E0E0 !important;
+}
+
+/* Destacar Links */
+body.highlight-links a {
+    background-color: #FFFF00 !important;
+    color: #000000 !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    padding: 2px;
+}
+
+/* Pausar Animações */
+body.pause-animations *,
+body.pause-animations *::before,
+body.pause-animations *::after {
+    animation-play-state: paused !important;
+    transition: none !important;
+}
