@@ -1,4 +1,4 @@
-# 💈 Barbearia DH Gentlemen Club — Redesign & Acessibilidade Premium
+# 💈 Barbearia DH Gentlemen Club
 
 Este repositório apresenta o redesign completo da interface web para a **Barbearia DH Gentlemen Club**. O projeto foi concebido com o objetivo de modernizar a presença digital da marca, elevar a experiência do usuário (UX) a um patamar altamente premium e garantir **100% de conformidade com as diretrizes de acessibilidade digital (A11y)**, atendendo de forma rigorosa aos padrões da **WCAG (Web Content Accessibility Guidelines)**.
 
