@@ -495,3 +495,511 @@ blockquote {
         height: 60px;
     }
 }
+
+/* ==========================================
+   ACESSIBILIDADE (A11Y) - BOTÃO FLUTUANTE & TEMAS
+   ========================================== */
+
+/* Variáveis A11y */
+:root {
+    --a11y-font-scale: 1;
+}
+
+/* 1. Zoom de Fonte via Elemento Raiz */
+html {
+    font-size: 100%;
+    /* Padrão */
+    transition: font-size 0.2s ease;
+}
+
+/* 2. Alto Contraste */
+html.a11y-high-contrast {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+html.a11y-high-contrast * {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    /* Texto em amarelo vibrante */
+    border-color: #ffff00 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+/* Bordas estruturais para manter a divisão do layout e evitar que tudo se funda em um único bloco preto */
+html.a11y-high-contrast main,
+html.a11y-high-contrast header,
+html.a11y-high-contrast nav,
+html.a11y-high-contrast section,
+html.a11y-high-contrast blockquote,
+html.a11y-high-contrast .div1,
+html.a11y-high-contrast .div2,
+html.a11y-high-contrast aside,
+html.a11y-high-contrast #botao {
+    border: 2px solid #ffff00 !important;
+}
+
+html.a11y-high-contrast a:not(.a11y-fab-trigger):not(.a11y-option-btn) {
+    color: #00ffff !important;
+    /* Links em ciano vibrante */
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+html.a11y-high-contrast button,
+html.a11y-high-contrast input,
+html.a11y-high-contrast select,
+html.a11y-high-contrast textarea {
+    border: 2px solid #ffff00 !important;
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}
+
+html.a11y-high-contrast img,
+html.a11y-high-contrast video,
+html.a11y-high-contrast iframe {
+    filter: grayscale(100%) contrast(150%) !important;
+}
+
+/* Estilos específicos para o próprio painel e botões de a11y em Alto Contraste */
+html.a11y-high-contrast .a11y-fab-container *,
+html.a11y-high-contrast .a11y-fab-container {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn {
+    border: 1px solid #ffff00 !important;
+}
+
+/* Feedback visual de hover/active no menu de acessibilidade */
+html.a11y-high-contrast .a11y-option-btn:hover,
+html.a11y-high-contrast .a11y-option-btn:focus-visible,
+html.a11y-high-contrast .a11y-option-btn.is-active {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn:hover *,
+html.a11y-high-contrast .a11y-option-btn:focus-visible *,
+html.a11y-high-contrast .a11y-option-btn.is-active * {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+
+/* 3. Modo Escuro */
+/* 3. Modo Claro */
+html.a11y-light-mode {
+    --color-primary-bg: #f5f2eb !important;
+    /* fundo linho aconchegante */
+    --color-secondary-bg: #ffffff !important;
+    --color-accent: #e26918 !important;
+    /* laranja/terracota terroso */
+    --color-text-light: #1e1e1e !important;
+    --color-text-lighter: #121212 !important;
+    --color-text-contrast: #2a2a2a !important;
+    --color-text-muted: #666666 !important;
+    --color-action-accessible: #d85600 !important;
+}
+
+html.a11y-light-mode body {
+    background-image: none !important;
+    background-color: #f5f2eb !important;
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode label,
+html.a11y-light-mode p,
+html.a11y-light-mode span,
+html.a11y-light-mode li,
+html.a11y-light-mode h1,
+html.a11y-light-mode h2,
+html.a11y-light-mode h3,
+html.a11y-light-mode blockquote,
+html.a11y-light-mode address {
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode main {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html.a11y-light-mode main h1,
+html.a11y-light-mode main h2,
+html.a11y-light-mode main h3,
+html.a11y-light-mode main p {
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode div section {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html.a11y-light-mode aside {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode blockquote {
+    background-color: #e7e7e6 !important;
+    border-left: 4px solid #e26918 !important;
+}
+
+html.a11y-light-mode #botao {
+    background-color: #e26918 !important;
+    color: #ffffff !important;
+}
+
+html.a11y-light-mode .attribution {
+    color: #666666 !important;
+}
+
+html.a11y-light-mode nav a,
+html.a11y-light-mode header nav a {
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode .hamburger {
+    color: #1e1e1e !important;
+}
+
+/* Customização do menu de acessibilidade no Modo Claro */
+html.a11y-light-mode .a11y-menu {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.a11y-light-mode .a11y-option-btn {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode .a11y-option-btn span {
+    color: #1e1e1e !important;
+}
+
+html.a11y-light-mode .a11y-icon svg {
+    fill: #1e1e1e !important;
+}
+
+/* Hover e focus-visible no Modo Claro */
+html.a11y-light-mode .a11y-option-btn:hover,
+html.a11y-light-mode .a11y-option-btn:focus-visible {
+    background: rgba(226, 105, 24, 0.15) !important;
+    border-color: rgba(226, 105, 24, 0.3) !important;
+    color: #e26918 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn:hover span,
+html.a11y-light-mode .a11y-option-btn:focus-visible span {
+    color: #e26918 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn:hover .a11y-icon svg,
+html.a11y-light-mode .a11y-option-btn:focus-visible .a11y-icon svg {
+    fill: #e26918 !important;
+}
+
+/* Botão ativo no Modo Claro */
+html.a11y-light-mode .a11y-option-btn.is-active {
+    background: #e26918 !important;
+    color: #ffffff !important;
+}
+
+html.a11y-light-mode .a11y-option-btn.is-active span {
+    color: #ffffff !important;
+}
+
+html.a11y-light-mode .a11y-option-btn.is-active .a11y-icon svg {
+    fill: #ffffff !important;
+}
+
+/* Botão de reset no Modo Claro */
+html.a11y-light-mode .a11y-option-btn[data-action="reset"] {
+    background: rgba(255, 0, 0, 0.08) !important;
+    border-color: rgba(255, 0, 0, 0.15) !important;
+    color: #cc0000 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn[data-action="reset"] span {
+    color: #cc0000 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn[data-action="reset"] .a11y-icon svg {
+    fill: #cc0000 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:hover,
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:focus-visible {
+    background: rgba(255, 0, 0, 0.15) !important;
+    color: #ff0000 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:hover span,
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:focus-visible span {
+    color: #ff0000 !important;
+}
+
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:hover .a11y-icon svg,
+html.a11y-light-mode .a11y-option-btn[data-action="reset"]:focus-visible .a11y-icon svg {
+    fill: #ff0000 !important;
+}
+
+/* Logotipo preta no Modo Claro */
+html.a11y-light-mode .nav-logo,
+html.a11y-light-mode #logo {
+    filter: brightness(0) !important;
+}
+
+html.a11y-light-mode .nav-logo {
+    color: transparent !important;
+}
+
+/* 4. Destacar Links */
+html.a11y-highlight-links a:not(.a11y-fab-trigger):not(.a11y-option-btn):not(.skip-link) {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    text-decoration: underline double #000000 !important;
+    outline: 2px solid #000000 !important;
+    outline-offset: 1px !important;
+    padding: 2px 4px !important;
+    border-radius: 4px !important;
+    transition: none !important;
+}
+
+/* 5. Pausar Animações */
+html.a11y-pause-animations *,
+html.a11y-pause-animations *::before,
+html.a11y-pause-animations *::after {
+    animation-play-state: paused !important;
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition: none !important;
+}
+
+/* 6. Botão Flutuante (FAB) & Menu de Acessibilidade */
+.a11y-fab-container {
+    position: fixed;
+    top: 30%;
+    right: 30px;
+    transform: translateY(-48px);
+    z-index: 99999;
+    font-family: "Inter", sans-serif;
+}
+
+.a11y-fab-trigger {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--color-action-accessible);
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.a11y-fab-trigger:hover,
+.a11y-fab-trigger:focus-visible {
+    transform: scale(1.1);
+    background-color: var(--color-action-hover);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.a11y-fab-trigger svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform 0.5s ease;
+}
+
+
+/* Menu de Acessibilidade (Glassmorphism) */
+.a11y-menu {
+    position: absolute;
+    right: 50px;
+    width: 170px;
+    background: rgba(16, 43, 19, 0.95);
+    /* Verde escuro semi-transparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    
+    /* Controlado via classes para transição premium ultra suave */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease;
+    color: #ffffff;
+}
+
+.a11y-menu.is-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.a11y-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 6px;
+}
+
+.a11y-menu-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-accent);
+}
+
+.a11y-close-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.a11y-close-btn:hover,
+.a11y-close-btn:focus-visible {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.a11y-menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.a11y-option-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.a11y-option-btn:hover,
+.a11y-option-btn:focus-visible {
+    background: rgba(249, 127, 44, 0.2);
+    /* Tom accent transparente */
+    border-color: rgba(249, 127, 44, 0.4);
+    transform: translateX(4px);
+    outline: none;
+}
+
+.a11y-option-btn.is-active {
+    background: var(--color-accent);
+    color: #000000;
+    font-weight: bold;
+}
+
+.a11y-option-btn.is-active .a11y-icon svg {
+    fill: #000000;
+}
+
+.a11y-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.a11y-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: #ffffff;
+    transition: fill 0.2s ease;
+}
+
+/* Reset button styling */
+.a11y-option-btn[data-action="reset"] {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 0, 0, 0.35);
+    color: #ff9999;
+}
+
+.a11y-option-btn[data-action="reset"] .a11y-icon svg {
+    fill: #ff9999;
+}
+
+.a11y-option-btn[data-action="reset"]:hover,
+.a11y-option-btn[data-action="reset"]:focus-visible {
+    background: rgba(255, 0, 0, 0.25);
+    border-color: rgba(255, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.a11y-option-btn[data-action="reset"]:hover .a11y-icon svg,
+.a11y-option-btn[data-action="reset"]:focus-visible .a11y-icon svg {
+    fill: #ffffff;
+}
+
+/* Responsividade do Painel */
+@media (max-width: 480px) {
+    .a11y-fab-container {
+        right: 29px;
+    }
+
+    .a11y-menu {
+        width: calc(100vw - 30px);
+        max-width: 320px;
+    }
+
+    [vw] {
+        right: 15px !important;
+    }
+}
+
+/* Posicionamento do VLibras (empilhado abaixo do FAB no meio vertical da página no lado direito) */
+[vw] {
+    left: auto !important;
+    right: 20px !important;
+    top: 30% !important;
+    bottom: auto !important;
+    transform: translateY(6px) !important;
+    z-index: 99999 !important;
+}
+
+[vw] [vw-access-button] {
+    left: auto !important;
+    right: 0 !important;
+}
