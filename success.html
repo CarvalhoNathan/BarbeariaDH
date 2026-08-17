@@ -4,19 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmado - Barbearia DH Gentlemen</title>
+    <title>Agendamento Confirmado - Barbearia DH Gentlemen</title>
     <link rel="icon" href="assets/img/logo-dh-laranja.svg" type="image/svg+xml">
-
     <link rel="stylesheet" href="assets/css/main.css">
-
     <style>
-        main {
-            background-color: #F5FAFB;
-            padding: 60px;
+        .success-wrapper {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        main h1 {
-            color: #000;
+        .success-card {
+            padding: 48px;
+            text-align: center;
+            max-width: 580px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .success-icon {
+            font-size: 3.5rem;
+            width: 80px;
+            height: 80px;
+            background: rgba(34, 197, 94, 0.15);
+            border: 2px solid #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-title {
+            font-family: "Luxurious Roman", serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .success-desc {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin: 0;
         }
     </style>
 </head>
@@ -28,10 +60,13 @@
         <nav>
             <button id="menu-btn" class="hamburger" aria-expanded="false" aria-label="Abrir menu de navegação">☰</button>
             <ul class="left">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="services.html">Serviços</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
             </ul>
-            <a href="index.html" class="nav-logo">Início</a>
+            <a href="index.html" class="nav-logo" aria-label="Página Inicial Barbearia DH Gentlemen">
+                <img src="assets/img/logo-dh-laranja.svg" alt="Logo Barbearia DH" width="45" height="45">
+            </a>
             <ul class="right">
                 <li><a href="schedule.html">Agenda</a></li>
                 <li><a href="location.html">Localização</a></li>
@@ -39,9 +74,52 @@
         </nav>
     </header>
 
-    <main id="main-content">
-        <h1>AGENDAMENTO CONFIRMADO!</h1>
+    <main id="main-content" class="success-wrapper container">
+        <div class="success-card glass-card">
+            <div class="success-icon">✓</div>
+            <h1 class="success-title">AGENDAMENTO CONFIRMADO!</h1>
+            <p class="success-desc">
+                Seu agendamento foi registrado com sucesso na <strong>Barbearia DH Gentlemen Club</strong>. Em breve você receberá uma confirmação no seu WhatsApp/E-mail. Esperamos por você!
+            </p>
+            <a href="index.html" class="btn-primary-glow" style="margin-top: 10px;">
+                <span>🏠 Voltar para a Página Inicial</span>
+            </a>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-logo-title">DH Gentlemen Club</h2>
+                    <p class="footer-desc">Barbearia premium dedicada à excelência em cortes, barba e cuidados masculinos em Santos/Gonzaga desde 2016.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a href="schedule.html">Agenda</a></li>
+                        <li><a href="location.html">Localização</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contato & Horários</h3>
+                    <div class="footer-contact-info">
+                        <p>📍 Santos / Gonzaga - SP</p>
+                        <p>🕒 Terça a Sábado: 09h às 20h</p>
+                        <p>📞 Agendamentos pelo site ou WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 - 2026 Barbearia DH Gentlemen Club. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="assets/js/a11y.js"></script>
 </body>
+
+</html>

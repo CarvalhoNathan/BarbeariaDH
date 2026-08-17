@@ -7,7 +7,6 @@
     <meta name="description" content="Conheça a história da Barbearia DH Gentlemen Club e o mestre barbeiro Douglas, dedicado à excelência desde 2016.">
     <title>Sobre Nós - Barbearia DH Gentlemen</title>
     <link rel="icon" href="assets/img/logo-dh-laranja.svg" type="image/svg+xml">
-
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
@@ -17,13 +16,15 @@
 
     <header>
         <nav>
-            <button id="menu-btn" class="hamburger" aria-expanded="false"
-                aria-label="Abrir menu de navegação">☰</button>
+            <button id="menu-btn" class="hamburger" aria-expanded="false" aria-label="Abrir menu de navegação">☰</button>
             <ul class="left">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="services.html">Serviços</a></li>
-                <li><a href="about.html" class="select">Sobre nós</a></li>
+                <li><a href="about.html" class="select" aria-current="page">Sobre nós</a></li>
             </ul>
-            <a href="index.html" class="nav-logo">Início</a>
+            <a href="index.html" class="nav-logo" aria-label="Página Inicial Barbearia DH Gentlemen">
+                <img src="assets/img/logo-dh-laranja.svg" alt="Logo Barbearia DH" width="45" height="45">
+            </a>
             <ul class="right">
                 <li><a href="schedule.html">Agenda</a></li>
                 <li><a href="location.html">Localização</a></li>
@@ -31,32 +32,69 @@
         </nav>
     </header>
 
-    <main id="main-content">
-        <h1 class="section-title">Sobre Nós</h1>
-        <p>
-            A DH Gentlemen Club, nasceu da paixão e da visão de Douglas, um artesão dedicado que, desde 2016, tem um
-            único compromisso: a excelência intransigente. Enquanto a maioria das barbearias cresce em equipe e escala,
-            a DH Gentlemen mantém uma filosofia de exclusividade e controle total de qualidade, sendo uma barbearia
-            premium.
-        </p>
-        <p>
-            Aqui, cada cliente é atendido e cuidado pessoalmente por Douglas. Isso significa que cada corte de cabelo,
-            cada design de barba e cada momento passado em nossa cadeira é uma obra de arte única, moldada pela
-            experiência de anos.
-        </p>
-        <p>
-            Ao entrar na DH Gentlemen Club, você não está apenas agendando um serviço, você está reservando um tempo com
-            o mestre. É a garantia de um 'Good Cut' executado com precisão e dedicação incomparáveis, tudo dentro de um
-            ambiente que faz jus ao nome Gentlemen Club
-        </p>
+    <main id="main-content" class="about-container container">
+        <div class="section-header">
+            <span class="section-tag">Nossa História</span>
+            <h1 class="section-main-title">Tradição, Visagismo & Arte</h1>
+        </div>
 
-        <a href="location.html" id="botao" aria-label="Conheça o nosso club e agende um horário">CONHEÇA O NOSSO
-            CLUB!</a>
+        <div class="about-grid">
+            <article class="about-content-card glass-card">
+                <p>
+                    A <strong>DH Gentlemen Club</strong> nasceu da paixão e da visão de Douglas, um artesão dedicado que, desde 2016, mantém um único compromisso: a <strong>excelência intransigente</strong>. Enquanto a maioria das barbearias cresce em equipe e escala, a DH Gentlemen preserva a filosofia de atendimento exclusivo e controle absoluto de qualidade.
+                </p>
+                <p>
+                    Aqui, cada cliente é atendido e cuidado pessoalmente por Douglas. Isso significa que cada corte de cabelo, cada design de barba e cada momento passado em nossa cadeira é executado como uma obra de arte única, moldada por anos de prática e especialização em visagismo masculino.
+                </p>
+                <p>
+                    Ao entrar na DH Gentlemen Club, você não está apenas agendando um serviço; você está reservando um tempo exclusivo com o mestre barbeiro. É a garantia de um <em>"Good Cut"</em> com precisão incomparável no coração do Gonzaga em Santos.
+                </p>
+                <div class="about-cta-wrapper">
+                    <a href="schedule.html" id="botao" class="btn-primary-glow" aria-label="Agende um horário e conheça o nosso club">
+                        <span>📅 CONHEÇA O NOSSO CLUB & AGENDE!</span>
+                    </a>
+                </div>
+            </article>
+
+            <figure class="about-image-card">
+                <img src="assets/img/barbeiro-cortando.jpg" alt="Foto do barbeiro Douglas com tesoura profissional realizando corte de cabelo de alta precisão">
+            </figure>
+        </div>
     </main>
 
-    <figure>
-        <img src="assets/img/barbeiro-cortando.jpg"
-            alt="Foto do barbeiro Douglas de uniforme preto, posicionado no centro da barbearia com decoração rústica e com detalhes de uma janela com moldura em madeira ao fundo.">
-    </figure>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-logo-title">DH Gentlemen Club</h2>
+                    <p class="footer-desc">Barbearia premium dedicada à excelência em cortes, barba e cuidados masculinos em Santos/Gonzaga desde 2016.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a href="schedule.html">Agenda</a></li>
+                        <li><a href="location.html">Localização</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contato & Horários</h3>
+                    <div class="footer-contact-info">
+                        <p>📍 Santos / Gonzaga - SP</p>
+                        <p>🕒 Terça a Sábado: 09h às 20h</p>
+                        <p>📞 Agendamentos pelo site ou WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 - 2026 Barbearia DH Gentlemen Club. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/a11y.js"></script>
 </body>
+
+</html>

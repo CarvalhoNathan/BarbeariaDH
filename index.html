@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barbearia DH Gentlemen Club - Experiência premium em corte de cabelo e barba em Santos/Gonzaga desde 2016.">
+    <meta name="description" content="Barbearia DH Gentlemen Club - Experiência premium em corte de cabelo, barboterapia e visagismo no Gonzaga em Santos desde 2016.">
+    <meta property="og:title" content="Barbearia DH Gentlemen Club - Santos / Gonzaga">
+    <meta property="og:description" content="Atendimento exclusivo, tradição e estilo contemporâneo. Agende seu horário online.">
+    <meta property="og:image" content="assets/img/corte-de-cabelo.jpg">
     <title>Início - Barbearia DH Gentlemen Club</title>
     <link rel="icon" href="assets/img/logo-dh-laranja.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -12,15 +15,18 @@
 
 <body>
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
     <header>
         <nav>
-            <button id="menu-btn" class="hamburger" aria-expanded="false"
-                aria-label="Abrir menu de navegação">☰</button>
+            <button id="menu-btn" class="hamburger" aria-expanded="false" aria-label="Abrir menu de navegação">☰</button>
             <ul class="left">
+                <li><a href="index.html" class="select" aria-current="page">Início</a></li>
                 <li><a href="services.html">Serviços</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
             </ul>
-            <a href="index.html" class="nav-logo">Início</a>
+            <a href="index.html" class="nav-logo" aria-label="Barbearia DH - Ir para o início">
+                <img src="assets/img/logo-dh-laranja.svg" alt="Logo Barbearia DH" width="45" height="45">
+            </a>
             <ul class="right">
                 <li><a href="schedule.html">Agenda</a></li>
                 <li><a href="location.html">Localização</a></li>
@@ -28,47 +34,277 @@
         </nav>
     </header>
 
-    <main id="main-content">
-        <h1>Gentlemen Club.</h1>
+    <main id="main-content" class="home-container container">
+        <!-- HERO SECTION (SPLIT 2 COLUNAS) -->
+        <section class="hero-section glass-card" aria-label="Apresentação da Barbearia DH">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>Barbearia Premium • Santos / Gonzaga</span>
+                </div>
+                <h1 class="hero-title">
+                    Sua imagem é a sua <span class="highlight-gold">Assinatura.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Cortes de alta precisão, barboterapia relaxante e um ambiente exclusivo feito para o homem moderno. Desde 2016 entregando excelência, visagismo e tradição no Gonzaga.
+                </p>
+                <div class="hero-actions">
+                    <a href="schedule.html" class="btn-primary-glow" aria-label="Agendar seu horário online agora">
+                        <span>📅 Agendar Horário Agora</span>
+                    </a>
+                    <a href="services.html" class="btn-secondary-glass" aria-label="Ver lista completa de serviços e valores">
+                        <span>✂️ Ver Serviços & Preços</span>
+                    </a>
+                </div>
+                <div class="hero-proof">
+                    <span class="stars-rating" aria-label="Avaliação 5 estrelas">★★★★★</span>
+                    <span><strong>4.9 / 5.0</strong> nas avaliações do Google (Mais de 500 clientes satisfeitos)</span>
+                </div>
+            </div>
 
-        <div class="div2">
-            <h2>Good<br>Cuts</h2>
-            <img src="assets/img/logo-dh-laranja.svg" height="50%" width="50%" alt="Logo DH Barbearia laranja">
-            <h2>Good<br>Times</h2>
-        </div>
+            <div class="hero-visual">
+                <img src="assets/img/espelho-barbearia.jpg" alt="Ambiente sofisticado com espelho vintage e cadeira de couro da Barbearia DH Gentlemen Club">
+                <div class="hero-floating-card">
+                    <div class="floating-icon" aria-hidden="true">💈</div>
+                    <div>
+                        <span class="floating-text-title">Ambiente Gentlemen Club</span>
+                        <span class="floating-text-sub">Gonzaga, Santos • Tradição desde 2016</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>Since 2016</h2>
+        <!-- STATS COUNTER BAR -->
+        <section class="stats-grid glass-card" aria-label="Estatísticas e conquistas">
+            <div class="stat-item">
+                <span class="stat-number">+8 Anos</span>
+                <span class="stat-label">Tradição desde 2016</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">+15.000</span>
+                <span class="stat-label">Cortes & Barbas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9 ★</span>
+                <span class="stat-label">Avaliação dos Clientes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Atendimento Exclusivo</span>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section aria-labelledby="exp-title-heading">
+            <div class="section-header">
+                <span class="section-tag">A Experiência Gentlemen Club</span>
+                <h2 id="exp-title-heading" class="section-main-title">Por que a DH é referência em Santos?</h2>
+            </div>
+            <div class="experience-grid">
+                <article class="exp-card glass-card">
+                    <div class="exp-icon" aria-hidden="true">💈</div>
+                    <h3 class="exp-title">Atendimento & Visagismo</h3>
+                    <p class="exp-desc">Estudo minucioso do seu tipo de rosto e estilo de vida para criar um corte único, feito sob medida para você.</p>
+                </article>
+                <article class="exp-card glass-card">
+                    <div class="exp-icon" aria-hidden="true">☕</div>
+                    <h3 class="exp-title">Bar & Lounge Exclusivo</h3>
+                    <p class="exp-desc">Desfrute de um ambiente sofisticado com café expresso artesanal, bebidas geladas e espaço de convivência.</p>
+                </article>
+                <article class="exp-card glass-card">
+                    <div class="exp-icon" aria-hidden="true">✂️</div>
+                    <h3 class="exp-title">Técnicas Clássicas</h3>
+                    <p class="exp-desc">Rituais tradicionais de barboterapia com toalha quente, massagem facial e alinhamento milimétrico na navalha.</p>
+                </article>
+                <article class="exp-card glass-card">
+                    <div class="exp-icon" aria-hidden="true">🧴</div>
+                    <h3 class="exp-title">Produtos de Alta Gama</h3>
+                    <p class="exp-desc">Uso exclusivo das melhores marcas mundiais como Keune e Baboon para tratamento e finalização perfeita.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION (3 CARDS EQUILIBRADOS) -->
+        <section aria-labelledby="gallery-title-heading">
+            <div class="section-header">
+                <span class="section-tag">Galeria de Trabalhos</span>
+                <h2 id="gallery-title-heading" class="section-main-title">Tradição e Estilo em Cada Detalhe</h2>
+            </div>
+            <div class="gallery-grid" role="region" aria-label="Galeria de fotos dos trabalhos da barbearia">
+                <div class="gallery-card">
+                    <img src="assets/img/corte-de-cabelo.jpg" alt="Corte de cabelo masculino com alinhamento e visagismo">
+                    <div class="gallery-overlay">
+                        <span class="gallery-badge">Corte Signature</span>
+                        <h3 class="gallery-title">Corte de Cabelo & Visagismo</h3>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/img/corte-de-barba.jpg" alt="Barboterapia com toalha quente e alinhamento na navalha">
+                    <div class="gallery-overlay">
+                        <span class="gallery-badge">Barboterapia</span>
+                        <h3 class="gallery-title">Barba com Toalha Quente</h3>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/img/secando-cabelo.jpg" alt="Finalização e modelagem de penteado masculino com secador profissional">
+                    <div class="gallery-overlay">
+                        <span class="gallery-badge">Styling Pro</span>
+                        <h3 class="gallery-title">Modelagem & Penteado</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE SERVICES HIGHLIGHT -->
+        <section aria-labelledby="services-title-heading">
+            <div class="section-header">
+                <span class="section-tag">Serviços Signature</span>
+                <h2 id="services-title-heading" class="section-main-title">Escolha a Sua Experiência</h2>
+            </div>
+            <div class="services-highlight-grid">
+                <article class="service-card glass-card">
+                    <div>
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-name">Corte Signature DH</h3>
+                                <span class="service-duration">⏱️ 45 minutos</span>
+                            </div>
+                            <span class="service-price">R$ 60</span>
+                        </div>
+                        <p class="service-desc">Lavagem com shampoo especial, corte com análise visagista, secagem e finalização com pomada Keune/Baboon.</p>
+                    </div>
+                    <a href="schedule.html" class="btn-primary-glow" aria-label="Agendar Corte Signature DH">Agendar Este Serviço</a>
+                </article>
+
+                <article class="service-card glass-card">
+                    <div>
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-name">Barboterapia Completa</h3>
+                                <span class="service-duration">⏱️ 35 minutos</span>
+                            </div>
+                            <span class="service-price">R$ 50</span>
+                        </div>
+                        <p class="service-desc">Alinhamento na navalha, aplicação de óleo essencial, toalha quente relaxante, massagem e balm hidratante.</p>
+                    </div>
+                    <a href="schedule.html" class="btn-primary-glow" aria-label="Agendar Barboterapia Completa">Agendar Este Serviço</a>
+                </article>
+
+                <article class="service-card glass-card">
+                    <div>
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-name">Combo Gentlemen Club</h3>
+                                <span class="service-duration">⏱️ 1h 15min</span>
+                            </div>
+                            <span class="service-price">R$ 100</span>
+                        </div>
+                        <p class="service-desc">A experiência definitiva: Corte de cabelo completo + Barboterapia relaxante + Bebida especial por conta da casa.</p>
+                    </div>
+                    <a href="schedule.html" class="btn-primary-glow" aria-label="Agendar Combo Gentlemen Club">Agendar Este Serviço</a>
+                </article>
+            </div>
+            <div class="services-footer-link">
+                <a href="services.html" class="link-styled">Ver tabela completa de serviços e tratamentos →</a>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section aria-labelledby="testimonials-title-heading">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos Reais</span>
+                <h2 id="testimonials-title-heading" class="section-main-title">O Que Dizem Nossos Clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial-card glass-card">
+                    <span class="stars-rating" aria-label="5 estrelas">★★★★★</span>
+                    <blockquote class="quote-text">
+                        “O melhor corte aqui na baixada, fora a experiência nota mil e o excelente atendimento fora da curva que só tem na DH!”
+                    </blockquote>
+                    <div class="author-info">
+                        <div class="author-avatar" aria-hidden="true">JS</div>
+                        <div class="author-details">
+                            <span class="author-name">João S.</span>
+                            <span class="author-tag">Cliente desde 2019</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card glass-card">
+                    <span class="stars-rating" aria-label="5 estrelas">★★★★★</span>
+                    <blockquote class="quote-text">
+                        “Melhor barbearia de Santos! Douglas é um fenômeno, entende exatamente o que você quer e supera todas as expectativas.”
+                    </blockquote>
+                    <div class="author-info">
+                        <div class="author-avatar" aria-hidden="true">MT</div>
+                        <div class="author-details">
+                            <span class="author-name">Marcelo T.</span>
+                            <span class="author-tag">Cliente Frequente</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card glass-card">
+                    <span class="stars-rating" aria-label="5 estrelas">★★★★★</span>
+                    <blockquote class="quote-text">
+                        “Pontualidade impecável, café excelente e um nível de acabamento na barba que não se encontra em outro lugar.”
+                    </blockquote>
+                    <div class="author-info">
+                        <div class="author-avatar" aria-hidden="true">RM</div>
+                        <div class="author-details">
+                            <span class="author-name">Rodrigo M.</span>
+                            <span class="author-tag">Cliente Verificado</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- QUICK SCHEDULE BANNER -->
+        <section class="quick-cta-card glass-card" aria-label="Chamada para agendamento rápido">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para renovar seu estilo?</h2>
+                <p class="cta-desc">Garanta seu horário em poucos cliques. Atendimento de Terça a Sábado das 09h às 20h no Gonzaga, Santos.</p>
+            </div>
+            <a href="schedule.html" class="btn-primary-glow" aria-label="Reservar horário na agenda">
+                <span>⚡ Agendar Meu Horário Agora</span>
+            </a>
+        </section>
     </main>
 
-    <figure class="galeria" role="region" aria-label="Galeria">
-        <img src="assets/img/cacto-decoracao.jpg" id="img1">
-        <img src="assets/img/corte-de-cabelo.jpg"
-            alt="Foto do barbeiro Douglas de uniforme preto, em plano médio dentro da barbearia, realizando um corte de cabelo com tesoura em um cliente sentado." id="img2">
-        <img src="assets/img/corte-de-barba.jpg"
-            alt="Foto em close-up das mãos do barbeiro, em ambiente interno iluminado, utilizando uma navalha para finalizar o desenho da barba de um cliente." id="img3">
-        <img src="assets/img/secando-cabelo.jpg"
-            alt="Foto do barbeiro Douglas em ação, no interior da barbearia com detalhes de uma janela com moldura em madeira ao fundo, utilizando um secador profissional para modelar o cabelo do cliente." id="img4">
-    </figure>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-logo-title">DH Gentlemen Club</h2>
+                    <p class="footer-desc">Barbearia premium dedicada à excelência em cortes, barba e cuidados masculinos em Santos/Gonzaga desde 2016.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a href="schedule.html">Agenda</a></li>
+                        <li><a href="location.html">Localização</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contato & Horários</h3>
+                    <div class="footer-contact-info">
+                        <p>📍 Santos / Gonzaga - SP</p>
+                        <p>🕒 Terça a Sábado: 09h às 20h</p>
+                        <p>📞 Agendamentos pelo site ou WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 - 2026 Barbearia DH Gentlemen Club. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <div class="div1" role="region" aria-label="Feedbacks">
-        <section>
-            <h2>Feedbacks</h2>
-            <blockquote>
-                <p>“O melhor corte aqui na baixada, fora a experiência nota mil e o excelente atendimento fora da curva
-                    que só tem na DH”</p>
-                <p class="attribution">— <cite>João S.</cite></p>
-            </blockquote>
-            <blockquote>
-                <p>“Melhor barbearia! Douglas um fenômeno, melhor barbeiro em todos os quesitos, entende a necessidade
-                    do cliente para o corte e barba atingir muito mais que a expectativa!”</p>
-                <p class="attribution">— <cite>Marcelo T.</cite></p>
-            </blockquote>
-        </section>
-        <a href="schedule.html" id="botao"
-            aria-label="Agende já seu corte: clique para escolher o melhor horário para você.">
-            AGENDE JÁ SEU CORTE
-        </a>
-    </div>
     <script src="assets/js/a11y.js"></script>
 </body>
 

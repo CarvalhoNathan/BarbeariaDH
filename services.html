@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Confira a linha de produtos da Barbearia DH Gentlemen Club: pomada em pó, kit Keune e gel Baboon.">
-    <title>Serviços - Barbearia DH Gentlemen</title>
+    <meta name="description" content="Confira a linha de produtos profissionais da Barbearia DH Gentlemen Club: pomada em pó, kit Keune e gel Baboon.">
+    <title>Serviços & Produtos - Barbearia DH Gentlemen</title>
     <link rel="icon" href="assets/img/logo-dh-laranja.svg" type="image/svg+xml">
-
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/services.css">
 </head>
@@ -17,13 +16,15 @@
 
     <header>
         <nav>
-            <button id="menu-btn" class="hamburger" aria-expanded="false"
-                aria-label="Abrir menu de navegação">☰</button>
+            <button id="menu-btn" class="hamburger" aria-expanded="false" aria-label="Abrir menu de navegação">☰</button>
             <ul class="left">
-                <li><a href="services.html" class="select">Serviços</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="services.html" class="select" aria-current="page">Serviços</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
             </ul>
-            <a href="index.html" class="nav-logo">Início</a>
+            <a href="index.html" class="nav-logo" aria-label="Página Inicial Barbearia DH Gentlemen">
+                <img src="assets/img/logo-dh-laranja.svg" alt="Logo Barbearia DH" width="45" height="45">
+            </a>
             <ul class="right">
                 <li><a href="schedule.html">Agenda</a></li>
                 <li><a href="location.html">Localização</a></li>
@@ -31,36 +32,61 @@
         </nav>
     </header>
 
-    <h1 class="section-title">Escolha um produto</h1>
-    <main id="main-content">
-        <figure
-            class="card card-pomada"
-            role="img"
-            aria-label="Foto de uma embalagem preta de pomada em pó para cabelos da marca Baboon, posicionada sobre uma bancada de madeira rústica no interior da barbearia, servindo como elemento decorativo e de demonstração de produto."
-            >
-            <h2>POMADA EM PÓ</h2>
-            <a href="#"
-            class="cardbot"
-            aria-label="Botão interativo de comprar, localizado abaixo da descrição da pomada em pó, que inicia o processo de aquisição do produto selecionado.">
-            Comprar</a>
-        </figure>
-        <figure
-            class="card card-keune"
-            role="img"
-            aria-label="Foto de um kit de produtos capilares da marca Keune, composto por shampoo e condicionador em embalagens cinza e prata, posicionados sobre uma bancada de madeira rústica dentro da barbearia, reforçando o padrão de qualidade dos serviços oferecidos."
-            >
-            <h2>KIT KEUNE</h2>
-            <a href="#" class="cardbot" aria-label="Botão interativo de comprar, posicionado junto ao Kit de tratamento Keune, que direciona o usuário para o checkout do conjunto de shampoo e condicionador.">Comprar</a>
-        </figure>
-        <figure
-            class="card card-baboon"
-            role="img"
-            aria-label="Foto de várias latas coloridas de gel modelador da marca Baboon, com rótulos ilustrados de macacos, organizadas sobre um tapete rústico de sisal em uma bancada de madeira escura no interior da barbearia, servindo como demonstração da variedade de produtos disponíveis."
-            >
-            <h2>GEL BABOON</h2>
-            <a href="#" class="cardbot" aria-label="Botão interativo de comprar, exibido na seção de gel modelador Baboon, que permite ao cliente adicionar o gel modelador ao carrinho de compras.">Comprar</a>
-        </figure>
+    <main id="main-content" class="services-container container">
+        <div class="section-header">
+            <span class="section-tag">Produtos Exclusivos</span>
+            <h1 class="section-main-title">Produtos de Alta Performance</h1>
+        </div>
+
+        <div class="products-grid">
+            <figure class="card card-pomada" role="img" aria-label="Foto de uma embalagem de pomada em pó Baboon">
+                <h2>POMADA EM PÓ BABOON</h2>
+                <a href="schedule.html" class="cardbot" aria-label="Comprar pomada em pó Baboon">Adquirir na Barbearia</a>
+            </figure>
+
+            <figure class="card card-keune" role="img" aria-label="Foto de um kit de tratamento capilar Keune">
+                <h2>KIT TRATAMENTO KEUNE</h2>
+                <a href="schedule.html" class="cardbot" aria-label="Comprar kit Keune">Adquirir na Barbearia</a>
+            </figure>
+
+            <figure class="card card-baboon" role="img" aria-label="Foto de latas de gel modelador Baboon">
+                <h2>GEL MODELADOR BABOON</h2>
+                <a href="schedule.html" class="cardbot" aria-label="Comprar gel Baboon">Adquirir na Barbearia</a>
+            </figure>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-logo-title">DH Gentlemen Club</h2>
+                    <p class="footer-desc">Barbearia premium dedicada à excelência em cortes, barba e produtos de alta performance em Santos/Gonzaga desde 2016.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a href="schedule.html">Agenda</a></li>
+                        <li><a href="location.html">Localização</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contato & Horários</h3>
+                    <div class="footer-contact-info">
+                        <p>📍 Santos / Gonzaga - SP</p>
+                        <p>🕒 Terça a Sábado: 09h às 20h</p>
+                        <p>📞 Agendamentos pelo site ou WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 - 2026 Barbearia DH Gentlemen Club. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="assets/js/a11y.js"></script>
 </body>

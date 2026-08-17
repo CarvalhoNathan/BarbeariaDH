@@ -1,60 +1,68 @@
-/* Importa o sistema de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Roman&display=swap');
+/* ==========================================
+   SOBRE NÓS PAGE STYLES (about.css)
+   ========================================== */
 
-main {
+main.about-container {
+    padding: 30px 0 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content-card {
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: auto;
-    padding: 40px 20px;
-    margin: 20px auto;
+    gap: 20px;
 }
 
-form {
-    width: 100%;
-    max-width: 500px;
-    z-index: 5;
+.about-content-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
 }
 
-#botao {
+.about-content-card p strong {
+    color: var(--color-accent);
+}
+
+.about-cta-wrapper {
+    margin-top: 10px;
+}
+
+.about-image-card {
     position: relative;
-    z-index: 10;
-    background-color: var(--color-primary-dark);
-    color: var(--color-text-lighter);
-    width: fit-content;
-    max-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-figure {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
     border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 10px 30px rgba(249, 127, 44, 0.2);
+    height: 100%;
+    max-height: 520px;
 }
 
-@media (min-width: 769px) {
-    body {
-        flex-direction: row;
-        align-items: flex-start;
+.about-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    main {
-        flex: 1.5;
-        padding: 40px;
+    .about-content-card {
+        padding: 24px;
     }
 
-    figure {
-        flex: 1;
-        padding: 40px;
+    .about-image-card {
+        height: 380px;
     }
 }
