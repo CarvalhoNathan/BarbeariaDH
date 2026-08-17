@@ -970,15 +970,15 @@ main.home-container {
 /* 9. ACESSIBILIDADE FAB & MENU */
 .a11y-fab-container {
     position: fixed;
-    top: 30%;
-    right: 30px;
+    top: 27.5%;
+    right: 28px;
     transform: translateY(-48px);
     z-index: 99999;
 }
 
 .a11y-fab-trigger {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 12px;
     background-color: var(--color-action-accessible);
     color: #ffffff;
@@ -1046,9 +1046,407 @@ main.home-container {
     transition: background 0.2s ease;
 }
 
-.a11y-option-btn:hover {
-    background: rgba(249, 127, 44, 0.25);
+.a11y-option-btn:hover,
+.a11y-option-btn.is-active {
+    background: rgba(249, 127, 44, 0.35);
     border-color: var(--color-accent);
+}
+
+.a11y-option-btn.is-active {
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+}
+
+/* --- REGRAS DE ACESSIBILIDADE ATIVAS (PERFEIÇOADAS) --- */
+
+/* 1. ALTO CONTRASTE (WCAG AAA STANDARD) */
+html.a11y-high-contrast body {
+    background-color: #000000 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast .glass-card,
+html.a11y-high-contrast header,
+html.a11y-high-contrast header nav,
+html.a11y-high-contrast .site-footer,
+html.a11y-high-contrast .hero-visual,
+html.a11y-high-contrast .exp-card,
+html.a11y-high-contrast .service-card,
+html.a11y-high-contrast .testimonial-card,
+html.a11y-high-contrast .quick-cta-card,
+html.a11y-high-contrast .schedule-card,
+html.a11y-high-contrast .about-content-card,
+html.a11y-high-contrast .about-image-card,
+html.a11y-high-contrast .location-info-card,
+html.a11y-high-contrast .map-wrapper,
+html.a11y-high-contrast .products-grid .card,
+html.a11y-high-contrast .success-card {
+    background: #000000 !important;
+    border: 2px solid #ffff00 !important;
+    box-shadow: none !important;
+}
+
+html.a11y-high-contrast h1,
+html.a11y-high-contrast h2,
+html.a11y-high-contrast h3,
+html.a11y-high-contrast h4,
+html.a11y-high-contrast .hero-title,
+html.a11y-high-contrast .section-main-title,
+html.a11y-high-contrast .section-tag,
+html.a11y-high-contrast .service-name,
+html.a11y-high-contrast .service-price,
+html.a11y-high-contrast .stat-number,
+html.a11y-high-contrast .footer-logo-title,
+html.a11y-high-contrast .footer-heading,
+html.a11y-high-contrast .cta-title,
+html.a11y-high-contrast .success-title,
+html.a11y-high-contrast .stars-rating {
+    color: #ffff00 !important;
+}
+
+html.a11y-high-contrast p,
+html.a11y-high-contrast span,
+html.a11y-high-contrast label,
+html.a11y-high-contrast blockquote,
+html.a11y-high-contrast li,
+html.a11y-high-contrast div,
+html.a11y-high-contrast .hero-subtitle,
+html.a11y-high-contrast .service-desc,
+html.a11y-high-contrast .exp-desc,
+html.a11y-high-contrast .cta-desc,
+html.a11y-high-contrast .footer-desc,
+html.a11y-high-contrast .quote-text,
+html.a11y-high-contrast .author-name,
+html.a11y-high-contrast .author-tag,
+html.a11y-high-contrast .stat-label,
+html.a11y-high-contrast .footer-contact-info p {
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast a {
+    color: #ffff00 !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+html.a11y-high-contrast header nav ul a {
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast header nav ul a.select {
+    color: #ffff00 !important;
+    border-bottom: 2px solid #ffff00 !important;
+}
+
+/* Botões Amarelos com Texto Preto Puro para Alto Contraste */
+html.a11y-high-contrast .btn-primary-glow,
+html.a11y-high-contrast .btn-secondary-glass,
+html.a11y-high-contrast button#botao,
+html.a11y-high-contrast .cardbot {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    font-weight: 900 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.a11y-high-contrast .btn-primary-glow *,
+html.a11y-high-contrast .btn-secondary-glass *,
+html.a11y-high-contrast button#botao *,
+html.a11y-high-contrast .cardbot * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+    fill: #000000 !important;
+}
+
+html.a11y-high-contrast .btn-primary-glow:hover,
+html.a11y-high-contrast .btn-secondary-glass:hover,
+html.a11y-high-contrast button#botao:hover,
+html.a11y-high-contrast .cardbot:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+html.a11y-high-contrast .btn-primary-glow:hover *,
+html.a11y-high-contrast .btn-secondary-glass:hover *,
+html.a11y-high-contrast button#botao:hover *,
+html.a11y-high-contrast .cardbot:hover * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+    fill: #000000 !important;
+}
+
+html.a11y-high-contrast input,
+html.a11y-high-contrast select,
+html.a11y-high-contrast textarea {
+    background: #000000 !important;
+    border: 2px solid #ffff00 !important;
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast select option {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast svg {
+    stroke: #ffff00 !important;
+}
+
+html.a11y-high-contrast .author-avatar {
+    background: #000000 !important;
+    border-color: #ffff00 !important;
+    color: #ffff00 !important;
+}
+
+html.a11y-high-contrast .stat-item {
+    border-right: 1px solid #ffff00 !important;
+}
+
+html.a11y-high-contrast .stat-item:last-child {
+    border-right: none !important;
+}
+
+html.a11y-high-contrast .nav-logo img {
+    filter: brightness(1.3) contrast(1.2) !important;
+}
+
+html.a11y-high-contrast .a11y-menu {
+    background: #000000 !important;
+    border: 2px solid #ffff00 !important;
+    box-shadow: none !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn {
+    background: #000000 !important;
+    border: 1px solid #ffff00 !important;
+    color: #ffffff !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn svg {
+    fill: #ffff00 !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn:hover,
+html.a11y-high-contrast .a11y-option-btn.is-active {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+html.a11y-high-contrast .a11y-option-btn:hover *,
+html.a11y-high-contrast .a11y-option-btn.is-active * {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+}
+
+/* 2. MODO CLARO (LIGHT MODE REFINADO) */
+html.a11y-light-mode body {
+    background-color: #f8fafc !important;
+    background-image: radial-gradient(circle at 50% 0%, rgba(249, 127, 44, 0.06) 0%, transparent 60%) !important;
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode header {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.a11y-light-mode header nav {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+html.a11y-light-mode header nav ul a {
+    color: #1e293b !important;
+}
+
+html.a11y-light-mode header nav ul a:hover,
+html.a11y-light-mode header nav ul a.select {
+    color: #ea580c !important;
+    background: rgba(234, 88, 12, 0.08) !important;
+}
+
+html.a11y-light-mode .glass-card,
+html.a11y-light-mode .schedule-card,
+html.a11y-light-mode .about-content-card,
+html.a11y-light-mode .location-info-card,
+html.a11y-light-mode .success-card {
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
+}
+
+html.a11y-light-mode h1,
+html.a11y-light-mode h2,
+html.a11y-light-mode h3,
+html.a11y-light-mode h4,
+html.a11y-light-mode .hero-title,
+html.a11y-light-mode .section-main-title,
+html.a11y-light-mode .service-name,
+html.a11y-light-mode .exp-title,
+html.a11y-light-mode .success-title,
+html.a11y-light-mode .location-info-card h2,
+html.a11y-light-mode .footer-logo-title {
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode .highlight-gold,
+html.a11y-light-mode .section-tag,
+html.a11y-light-mode .service-price,
+html.a11y-light-mode .stat-number,
+html.a11y-light-mode .author-tag {
+    color: #ea580c !important;
+}
+
+html.a11y-light-mode p,
+html.a11y-light-mode span,
+html.a11y-light-mode label,
+html.a11y-light-mode blockquote,
+html.a11y-light-mode .hero-subtitle,
+html.a11y-light-mode .service-desc,
+html.a11y-light-mode .exp-desc,
+html.a11y-light-mode .footer-desc,
+html.a11y-light-mode .quote-text,
+html.a11y-light-mode .author-name,
+html.a11y-light-mode .stat-label,
+html.a11y-light-mode .footer-contact-info p,
+html.a11y-light-mode .location-details p {
+    color: #334155 !important;
+}
+
+html.a11y-light-mode .hero-visual {
+    background-color: #f1f5f9 !important;
+    border: 2px solid #ea580c !important;
+    box-shadow: 0 15px 35px rgba(234, 88, 12, 0.15) !important;
+}
+
+html.a11y-light-mode .stat-item {
+    border-right: 1px solid #cbd5e1 !important;
+}
+
+html.a11y-light-mode .stat-item:last-child {
+    border-right: none !important;
+}
+
+html.a11y-light-mode .quick-cta-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    border: 2px solid #ea580c !important;
+}
+
+html.a11y-light-mode .quick-cta-card .cta-title {
+    color: #ffffff !important;
+}
+
+html.a11y-light-mode .quick-cta-card .cta-desc {
+    color: #cbd5e1 !important;
+}
+
+html.a11y-light-mode .btn-primary-glow,
+html.a11y-light-mode button#botao,
+html.a11y-light-mode .cardbot {
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3) !important;
+}
+
+html.a11y-light-mode .btn-secondary-glass {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.a11y-light-mode input,
+html.a11y-light-mode select,
+html.a11y-light-mode textarea {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode select option {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode .site-footer {
+    background: #f1f5f9 !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+html.a11y-light-mode .site-footer .footer-heading {
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode .site-footer .footer-links a {
+    color: #475569 !important;
+}
+
+html.a11y-light-mode .site-footer .footer-links a:hover {
+    color: #ea580c !important;
+}
+
+html.a11y-light-mode .products-grid .card::before {
+    background: linear-gradient(to top, rgba(248, 250, 252, 0.98) 0%, rgba(248, 250, 252, 0.4) 65%, rgba(0, 0, 0, 0.1) 100%) !important;
+}
+
+html.a11y-light-mode .products-grid .card h2 {
+    color: #0f172a !important;
+    text-shadow: none !important;
+}
+
+/* Menu de Acessibilidade no Modo Claro */
+html.a11y-light-mode .a11y-menu {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+html.a11y-light-mode .a11y-option-btn {
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+html.a11y-light-mode .a11y-option-btn svg {
+    fill: #0f172a !important;
+}
+
+html.a11y-light-mode .a11y-option-btn:hover,
+html.a11y-light-mode .a11y-option-btn.is-active {
+    background: rgba(234, 88, 12, 0.12) !important;
+    border-color: #ea580c !important;
+    color: #ea580c !important;
+}
+
+html.a11y-light-mode .a11y-option-btn:hover svg,
+html.a11y-light-mode .a11y-option-btn.is-active svg {
+    fill: #ea580c !important;
+}
+
+/* 3. DESTACAR LINKS */
+html.a11y-highlight-links a {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 4px !important;
+    background-color: rgba(249, 127, 44, 0.25) !important;
+    outline: 2px solid var(--color-accent) !important;
+    outline-offset: 2px !important;
+    border-radius: 4px !important;
+}
+
+/* 4. PAUSAR ANIMAÇÕES */
+html.a11y-pause-animations,
+html.a11y-pause-animations *,
+html.a11y-pause-animations *::before,
+html.a11y-pause-animations *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
 }
 
 [vw] {
