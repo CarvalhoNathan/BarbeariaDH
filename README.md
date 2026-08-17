@@ -45,6 +45,17 @@ Projetamos o controle de navegação para simular o comportamento de uma aplica�
 
 ---
 
+## 🎨 Redesign Visual 2.0 & Estética Gentlemen Club
+
+A interface passou por uma reformulação visual completa focada no conceito **Gentlemen Club moderno**:
+* **Hero Banner Split 2 Colunas:** Exibição da marca e chamada principal no lado esquerdo com a foto em alta definição da placa oficial da barbearia (`logo-outdoor.jpg`) e pill badge de fachada no lado direito.
+* **Métricas & Estatísticas (4 Colunas):** Barra horizontal de conquistas (`+8 Anos`, `+15.000 Cortes`, `4.9 ★`, `100% Exclusivo`).
+* **Experiência Gentlemen Club:** Grid responsivo de 4 cards laterais destacando os diferenciais da barbearia (Visagismo, Bar & Lounge, Técnicas Clássicas, Produtos Keune/Baboon).
+* **Galeria 3 Cards:** Fotografias em alta resolução sem distorções horizontais (*Corte Signature*, *Barboterapia* e *Espaço Gentlemen Club HD*).
+* **Ícones Vetoriais SVG Inline:** Substituição integral dos emoticons por ícones vetoriais em SVG limpos, responsivos e estilizados por CSS (`currentColor` e `var(--color-accent)`).
+
+---
+
 ## 📂 Estrutura do Projeto
 
 A organização dos arquivos segue o padrão clássico e modular de páginas estáticas:
@@ -54,14 +65,16 @@ BarbeariaDH/
 ├── assets/
 │   ├── css/
 │   │   ├── about.css       # Estilos específicos da página "Sobre Nós"
+│   │   ├── location.css    # Estilos específicos da página "Localização"
 │   │   ├── main.css        # Variáveis CSS, estilos globais e regras de Acessibilidade
 │   │   ├── schedule.css    # Estilos específicos do formulário de Agendamento
 │   │   └── services.css    # Estilos específicos da vitrine de Produtos/Serviços
-│   ├── img/                # Assets gráficos e fotos otimizadas
+│   ├── img/                # Assets gráficos e fotos otimizadas (ex: logo-outdoor.jpg, espelho-barbearia.jpg)
 │   └── js/
-│       └── a11y.js         # Core de Acessibilidade, Loop de Foco e Injeção do VLibras
+│       ├── a11y.js         # Core de Acessibilidade, Loop de Foco e Injeção do VLibras
+│       └── schedule.js     # Validação de formulário, máscara de telefone e horários dinâmicos
 ├── about.html              # Página "Sobre Nós"
-├── index.html              # Página Inicial (Landing Page)
+├── index.html              # Página Inicial (Landing Page com Hero Split)
 ├── location.html           # Página de Localização e Mapa Interativo
 ├── schedule.html           # Formulário de Agendamento Inteligente com máscara de telefone
 ├── services.html           # Vitrine de Serviços e Produtos
