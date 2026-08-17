@@ -1,17 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Roman&display=swap');
 
 :root {
-    --color-text-light: #f5f5f5;
-    --color-text-lighter: #f5fafb;
-    --color-text-contrast: #f2eceb;
-    --color-text-muted: #b6b6b6;
-    --color-primary-bg: #08370b;
-    --color-secondary-bg: #102b13;
-    --color-accent: #f97f2c;
-    --color-action: #e26918;
-    --color-action-hover: #d85600;
+    /* 🌲 Paleta Verde (Identidade Barbearia DH) */
+    --color-primary-bg: #08370b;        /* Verde garrafa principal dos containers */
+    --color-secondary-bg: #102b13;      /* Verde escuro secundario (depoimentos) */
+    --color-primary-dark: #0e2610;      /* Verde escuro profundo / hover */
+
+    /* 🍊 Paleta Laranja (Destaques e Botoes de Acao) */
+    --color-accent: #f97f2c;            /* Laranja da logo / destaques */
+    --color-action: #e26918;            /* Laranja terracota principal */
+    --color-action-accessible: #FF6600; /* Laranja vibrante para botoes de alta visibilidade */
+    --color-action-hover: #d85600;      /* Laranja escuro no hover dos botoes */
     --color-link-focus: #0e6814;
-    --color-action-accessible: #FF6600;
+
+    /* 📄 Paleta Tipografica e Neutros */
+    --color-text-light: #f5f5f5;       /* Texto claro principal */
+    --color-text-lighter: #f5fafb;     /* Texto branco linho */
+    --color-text-contrast: #f2eceb;    /* Texto contrastante */
+    --color-text-muted: #b6b6b6;       /* Texto secundario / atribuicoes */
+    --color-border-light: #ffffff;      /* Bordas brancas em cartoes e fotos */
+
+    /* 📋 Formularios e Superficies */
+    --color-surface: #f8fcfd;           /* Fundo da pagina de agendamento */
+    --color-input: #e0e0e0;             /* Fundo dos inputs do formulario */
+    --color-input-focus: #d1d1d1;       /* Fundo do input ao focar */
+    --color-overlay: rgba(0, 0, 0, 0.45);/* Overlay escuro em cards */
 }
 
 * {

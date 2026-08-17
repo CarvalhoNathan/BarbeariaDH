@@ -1,14 +1,5 @@
-:root {
-    --color-text-light: #f5f5f5;
-    --color-text-lighter: #f5fafb;
-    --color-text-muted: #b6b6b6;
-    --color-primary-bg: #08370b;
-    --color-primary-bg-dark: #0b470f;
-    --color-border-light: #ffffff;
-    --color-overlay: rgba(0, 0, 0, 0.45);
-    --color-accent: #f97f2c;
-    --color-action-hover: #df6f25;
-}
+/* Estilos especificos para a Vitrine de Serviços */
+
 
 main {
     background-color: transparent;
@@ -90,7 +81,7 @@ figure * {
 }
 
 .cardbot:hover {
-    background-color: var(--color-primary-bg-dark);
+    background-color: var(--color-primary-dark);
 }
 
 /* Responsividade */

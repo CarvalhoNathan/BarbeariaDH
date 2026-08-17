@@ -6,7 +6,7 @@ main {
     justify-content: center;
     width: min(100%, 1100px);
     margin: 0 auto;
-    border: 2px #F5FAFB solid;
+    border: 2px var(--color-text-lighter) solid;
     padding: 10px;
 }
 
@@ -15,14 +15,14 @@ iframe {
     height: 100%;
     min-height: 400px;
     border-radius: 20px;
-    border: 2px solid #F5FAFB;
+    border: 2px solid var(--color-text-lighter);
     box-sizing: border-box;
     display: block;
 }
 
 aside {
     align-self: stretch;
-    color: #F5FAFB;
+    color: var(--color-text-lighter);
     padding: 20px;
     background: rgba(8, 55, 11, 0.6);
     border-radius: 0 20px 20px 0;
