@@ -58,6 +58,16 @@ input, select, textarea {
     color: #000 !important;
 }
 
+#horario {
+    width: 140px;
+    max-width: 100%;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 #botao {
     background-color: var(--color-action);
     color: #000000;

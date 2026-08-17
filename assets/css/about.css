@@ -7,32 +7,31 @@
     --color-primary-bg-dark: #0e2610;
 }
 
-/* No seu schedule.css */
-
 main {
     display: flex;
-    flex-direction: column; /* Para o formulário ficar abaixo de qualquer outro elemento interno */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    min-height: auto;
     padding: 40px 20px;
     margin: 20px auto;
 }
 
 form {
     width: 100%;
-    max-width: 500px; /* Mantém o formulário com uma largura elegante */
+    max-width: 500px;
     z-index: 5;
 }
 
 #botao {
-    position: relative; /* Garante que o botão respeite o fluxo do formulário */
+    position: relative;
     z-index: 10;
-}
-
-#botao{
     background-color: var(--color-primary-bg-dark);
     color: var(--color-text-lighter);
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 figure {
@@ -44,21 +43,14 @@ figure {
 }
 
 figure img {
-    max-width: 100%; /* Garante que a imagem não vaze para os lados */
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
-#botao {
-    width: fit-content; /* O botão se ajusta ao tamanho do texto */
-    max-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
 @media (min-width: 769px) {
     body {
-        flex-direction: row; /* Volta a ficar lado a lado no PC */
+        flex-direction: row;
         align-items: flex-start;
     }
 
@@ -72,4 +64,3 @@ figure img {
         padding: 40px;
     }
 }
-

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende seu corte de cabelo ou barba na Barbearia DH Gentlemen Club. Escolha a data e horário ideal.">
     <title>Agenda - Barbearia DH Gentlemen</title>
+    <link rel="icon" href="assets/img/logo-dh-laranja.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/schedule.css">
@@ -20,7 +22,7 @@
                 <li><a href="services.html">Serviços</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
             </ul>
-            <a href="index.html" class="nav-logo">Início</a>
+            <a href="index.html" class="nav-logo" aria-label="Página Inicial Barbearia DH Gentlemen">Início</a>
             <ul class="right">
                 <li><a href="schedule.html" class="select">Agenda</a></li>
                 <li><a href="location.html">Localização</a></li>
@@ -32,58 +34,37 @@
 
         <form action="success.html">
 
-    <label for="nome" class="obrigatorio">Seu nome:</label>
-    <input type="text" id="nome" name="nome" required placeholder="Escreva seu nome aqui!">
+            <label for="nome" class="obrigatorio">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Escreva seu nome aqui!">
 
-    <label for="servico" class="obrigatorio">Tipo de serviço:</label>
-    <select id="servico" name="servico" required>
-        <option value="" disabled selected>Selecione...</option>
-        <option value="masculino">Corte Masculino</option>
-        <option value="barba">Corte + Barba</option>
-        <option value="feminino">Corte Feminino</option>
-    </select>
+            <label for="servico" class="obrigatorio">Tipo de serviço:</label>
+            <select id="servico" name="servico" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="masculino">Corte Masculino</option>
+                <option value="barba">Corte + Barba</option>
+                <option value="feminino">Corte Feminino</option>
+            </select>
 
-    <label for="telefone" class="obrigatorio">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required placeholder="13 12345-6789">
+            <label for="telefone" class="obrigatorio">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="13 12345-6789">
 
-    <label for="email" class="obrigatorio">E-mail:</label>
-    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            <label for="email" class="obrigatorio">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
 
-    <label for="data" class="obrigatorio">Quando deseja agendar?</label>
-    <input type="date" id="data" name="data" required>
+            <label for="data" class="obrigatorio">Quando deseja agendar?</label>
+            <input type="date" id="data" name="data" required>
 
-    <label for="horario" class="obrigatorio">Escolha o seu horário:</label>
-    <select id="horario" name="horario" style="width: 120px;" required></select>
+            <label for="horario" class="obrigatorio">Escolha o seu horário:</label>
+            <select id="horario" name="horario" required></select>
 
-    <script>
-        const selectHorario = document.getElementById('horario');
-        for (let h = 10; h <= 19; h++) {
-            ['00', '30'].forEach(m => selectHorario.add(new Option(`${h}:${m}`, `${h}:${m}`)));
-        }
+            <label for="observacao">Alguma observação? (Opcional)</label>
+            <textarea id="observacao" name="observacao" rows="3" placeholder="Ex: Quero disfarçado, cortar só na tesoura, tenho alergia a gilete..."></textarea>
 
-        const inputTelefone = document.getElementById('telefone');
-        inputTelefone.addEventListener('input', function (e) {
-            let valor = e.target.value.replace(/\D/g, ''); 
-            valor = valor.substring(0, 11);                  
-            let formatado = '';
-            if (valor.length > 0) {
-                formatado = '(' + valor;
-            }
-            if (valor.length > 2) {
-                formatado = '(' + valor.substring(0, 2) + ') ' + valor.substring(2);
-            }
-            if (valor.length > 7) {
-                formatado = '(' + valor.substring(0, 2) + ') ' + valor.substring(2, 7) + '-' + valor.substring(7);
-            }
-            e.target.value = formatado;
-        });
-    </script>
-
-    <label for="observacao">Alguma observação? (Opcional)</label>
-    <textarea id="observacao" name="observacao" rows="3" style="width: 100%" placeholder="Ex: Quero disfarçado, cortar só na tesoura, tenho alergia a gilete..."></textarea>
-
-    <button type="submit" id="botao">AGENDAR</button>
-</form>
+            <button type="submit" id="botao">AGENDAR</button>
+        </form>
     </main>
+    <script src="assets/js/schedule.js"></script>
     <script src="assets/js/a11y.js"></script>
 </body>
+
+</html>

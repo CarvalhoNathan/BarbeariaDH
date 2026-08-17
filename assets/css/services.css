@@ -10,7 +10,7 @@
     --color-action-hover: #df6f25;
 }
 
-main{
+main {
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,9 +25,10 @@ main{
     font-size: 2rem;
     text-align: center;
 }
-.card{
+
+.card {
     position: relative;
-    height: 350px; 
+    height: 350px;
     border-radius: 30px;
     border: 2px solid var(--color-border-light);
     background-size: cover;
@@ -37,6 +38,18 @@ main{
     flex-direction: column;
     justify-content: end;
     overflow: hidden;
+}
+
+.card-pomada {
+    background-image: url('../../assets/img/pomada-em-po.jpg');
+}
+
+.card-keune {
+    background-image: url('../../assets/img/kit-keune.jpg');
+}
+
+.card-baboon {
+    background-image: url('../../assets/img/gel-baboon.jpg');
 }
 
 .card::before {
@@ -54,22 +67,17 @@ main{
     z-index: 2;
 }
 
-figure *{
-    text-align:center;
+figure * {
+    text-align: center;
     color: var(--color-text-light);
     margin: 5px 50px;
 }
 
 .card h2 {
-    text-shadow: 0 0 8px rgba(0,0,0,0.75);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
 }
 
 .cardbot {
-    background-color: rgba(8, 55, 11, 0.95);
-    border: 1px solid #FFFFFF;
-}
-
-.cardbot{
     display: block;
     background-color: var(--color-primary-bg);
     color: var(--color-text-lighter);
@@ -78,8 +86,10 @@ figure *{
     border-radius: 20px;
     margin-bottom: 15px;
     padding: 5px;
+    border: 1px solid #FFFFFF;
 }
-.cardbot:hover{
+
+.cardbot:hover {
     background-color: var(--color-primary-bg-dark);
 }
 
