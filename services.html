@@ -34,40 +34,404 @@
 
     <main id="main-content" class="services-container container">
         <div class="section-header">
-            <span class="section-tag">Menu Completo & Especialidades</span>
-            <h1 class="section-main-title">Serviços, Estilos & Produtos</h1>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 14px;">
-                <span class="payment-badge" style="background: rgba(249, 127, 44, 0.15); border-color: var(--color-accent); color: #ffffff;">✂️ Corte Clássico & Tesoura</span>
-                <span class="payment-badge" style="background: rgba(249, 127, 44, 0.15); border-color: var(--color-accent); color: #ffffff;">💈 Old Money & Italiana</span>
-                <span class="payment-badge" style="background: rgba(249, 127, 44, 0.15); border-color: var(--color-accent); color: #ffffff;">⚡ Degradê & Sombreado</span>
-                <span class="payment-badge" style="background: rgba(249, 127, 44, 0.15); border-color: var(--color-accent); color: #ffffff;">👶 Atendimento Adulto & Infantil</span>
-            </div>
+            <span class="section-tag">Tabela de Preços & Menu Completo</span>
+            <h1 class="section-main-title">Nossos Serviços & Especialidades</h1>
+            <p style="max-width: 680px; margin: 12px auto 0; color: var(--color-text-muted); font-size: 0.98rem; text-align: center;">
+                Atendimento 100% individualizado pelo Barbeiro Chefe <strong>Douglas Henrique</strong> com produtos de alta gama Keune, Baboon e Pacinos.
+            </p>
         </div>
 
-        <div class="products-grid">
-            <figure class="card card-pomada" role="img" aria-label="Foto de uma embalagem de pomada em pó Baboon">
-                <h2>POMADA EM PÓ BABOON</h2>
-                <a href="schedule.html" class="cardbot" aria-label="Comprar pomada em pó Baboon">
-                    <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
-                    Adquirir na Barbearia
-                </a>
-            </figure>
+        <!-- BARRA DE FILTROS -->
+        <div class="services-filter-bar" role="tablist" aria-label="Filtro de categorias de serviços">
+            <button type="button" class="services-filter-btn active" data-filter="all">Todos os Serviços (20)</button>
+            <button type="button" class="services-filter-btn" data-filter="combos">👑 Combos VIP</button>
+            <button type="button" class="services-filter-btn" data-filter="cabelo">✂️ Cabelo</button>
+            <button type="button" class="services-filter-btn" data-filter="barba">🧔 Barba</button>
+            <button type="button" class="services-filter-btn" data-filter="tratamentos">🧪 Tratamentos & Alinhamentos</button>
+            <button type="button" class="services-filter-btn" data-filter="estetica">📐 Estética Facial</button>
+        </div>
 
-            <figure class="card card-keune" role="img" aria-label="Foto de um kit de tratamento capilar Keune">
-                <h2>KIT TRATAMENTO KEUNE</h2>
-                <a href="schedule.html" class="cardbot" aria-label="Comprar kit Keune">
-                    <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
-                    Adquirir na Barbearia
-                </a>
-            </figure>
+        <!-- GRID DE CARDS DOS 20 SERVIÇOS -->
+        <div class="services-grid" role="region" aria-label="Lista de serviços da barbearia">
+            
+            <!-- COMBOS VIP -->
+            <article class="service-card" data-category="combos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Combo 1 - Cabelo + Barboterapia</h3>
+                        <span class="service-card-duration">⏱️ 1h 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 160,00</div>
+                    <p class="service-card-desc">Corte com visagismo sob medida + Barboterapia completa com toalha quente, alinhamento na navalha e pós-barba.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book" aria-label="Agendar Combo 1">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+o+Combo+1+-+Cabelo+%2B+Barboterapia+%28R%24+160%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp" aria-label="Agendar Combo 1 via WhatsApp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
 
-            <figure class="card card-baboon" role="img" aria-label="Foto de latas de gel modelador Baboon">
-                <h2>GEL MODELADOR BABOON</h2>
-                <a href="schedule.html" class="cardbot" aria-label="Comprar gel Baboon">
-                    <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
-                    Adquirir na Barbearia
-                </a>
-            </figure>
+            <article class="service-card" data-category="combos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Combo 2 - Cabelo + Barboterapia + Sobrancelha</h3>
+                        <span class="service-card-duration">⏱️ 1h 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 190,00</div>
+                    <p class="service-card-desc">Corte de cabelo completo + Ritual tradicional de Barboterapia + Design e alinhamento de sobrancelha navalhada.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+o+Combo+2+-+Cabelo+%2B+Barboterapia+%2B+Sobrancelha+%28R%24+190%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="combos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Combo 3 - Cabelo + Barboterapia + Tonalização</h3>
+                        <span class="service-card-duration">⏱️ 1h 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 350,00</div>
+                    <p class="service-card-desc">Experiência VIP completa: Corte + Barboterapia + Tonalização de fios brancos no cabelo e na barba.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+o+Combo+3+-+Cabelo+%2B+Barboterapia+%2B+Tonaliza%C3%A7%C3%A3o+%28R%24+350%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="combos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte + Barboterapia + Botox Capilar</h3>
+                        <span class="service-card-duration">⏱️ 2h</span>
+                    </div>
+                    <div class="service-card-price">R$ 350,00</div>
+                    <p class="service-card-desc">Tratamento intensivo de 2 horas com corte, barboterapia tradicional e alinhamento capilar com redução de volume e frizz.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+o+Corte+%2B+Barboterapia+%2B+Botox+Capilar+%28R%24+350%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- CABELO -->
+            <article class="service-card" data-category="cabelo">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte Masculino</h3>
+                        <span class="service-card-duration">⏱️ 1h</span>
+                    </div>
+                    <div class="service-card-price">R$ 100,00</div>
+                    <p class="service-card-desc">Corte completo com todos os cuidados e técnica personalizada: tesoura, máquina ou navalhado com visagismo.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+um+Corte+Masculino+%28R%24+100%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="cabelo">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte + Sobrancelha</h3>
+                        <span class="service-card-duration">⏱️ 1h</span>
+                    </div>
+                    <div class="service-card-price">R$ 130,00</div>
+                    <p class="service-card-desc">Corte de cabelo completo com higienização e finalização + alinhamento de sobrancelha navalhada.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Corte+%2B+Sobrancelha+%28R%24+130%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="cabelo">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte + Tonalização de Fios Brancos</h3>
+                        <span class="service-card-duration">⏱️ 1h</span>
+                    </div>
+                    <div class="service-card-price">R$ 210,00</div>
+                    <p class="service-card-desc">Corte de cabelo + Tonalização Keune de alta qualidade para cobertura discreta e natural dos fios brancos.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Corte+%2B+Tonaliza%C3%A7%C3%A3o+de+Fios+Brancos+%28R%24+210%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BARBA -->
+            <article class="service-card" data-category="barba">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Barboterapia</h3>
+                        <span class="service-card-duration">⏱️ 40min</span>
+                    </div>
+                    <div class="service-card-price">R$ 80,00</div>
+                    <p class="service-card-desc">Barba com todos os cuidados tradicionais: aplicação de toalha quente, espuma de barbear, laminar preciso e pós-barba hidratante.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+a+Barboterapia+%28R%24+80%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="barba">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Camuflagem de Fios Brancos (Barba/Bigode)</h3>
+                        <span class="service-card-duration">⏱️ 30min</span>
+                    </div>
+                    <div class="service-card-price">R$ 100,00</div>
+                    <p class="service-card-desc">Camuflagem sutil e harmoniosa dos fios brancos da barba e do bigode, mantendo a tonalidade natural dos pelos.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Camuflagem+de+Barba%2FBigode+%28R%24+100%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="barba">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Tonalização de Barba e Bigode</h3>
+                        <span class="service-card-duration">⏱️ 30min</span>
+                    </div>
+                    <div class="service-card-price">R$ 100,00</div>
+                    <p class="service-card-desc">Tonalização com pigmentação especial para alinhar a cor e uniformizar falhas na barba e bigode.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Tonaliza%C3%A7%C3%A3o+de+Barba+e+Bigode+%28R%24+100%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- TRATAMENTOS & BOTOX -->
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte + Botox Capilar</h3>
+                        <span class="service-card-duration">⏱️ 1h 30min</span>
+                    </div>
+                    <div class="service-card-price">R$ 290,00</div>
+                    <p class="service-card-desc">Corte de cabelo + Aplicação de Botox Capilar para alinhamento dos fios, redução de volume e eliminação do frizz.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Corte+%2B+Botox+Capilar+%28R%24+290%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Corte + Botox + Sobrancelha</h3>
+                        <span class="service-card-duration">⏱️ 1h 40min</span>
+                    </div>
+                    <div class="service-card-price">R$ 320,00</div>
+                    <p class="service-card-desc">Combo completo de imagem: Corte + Sobrancelha navalhada + Botox Capilar para fios disciplinados e hidratados.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Corte+%2B+Botox+%2B+Sobrancelha+%28R%24+320%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Camuflagem de Fios Brancos (Cabelo)</h3>
+                        <span class="service-card-duration">⏱️ 40min</span>
+                    </div>
+                    <div class="service-card-price">R$ 110,00</div>
+                    <p class="service-card-desc">Camuflagem capilar de rápida aplicação para rejuvenescimento sutil sem aparentar que o cabelo foi tingido.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Camuflagem+de+Fios+Brancos+Cabelo+%28R%24+110%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Tonalização de Cabelo</h3>
+                        <span class="service-card-duration">⏱️ 40min</span>
+                    </div>
+                    <div class="service-card-price">R$ 110,00</div>
+                    <p class="service-card-desc">Tonalização capilar Keune para realce da cor, brilho e eliminação de tons amarelados ou desbotados.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Tonaliza%C3%A7%C3%A3o+de+Cabelo+%28R%24+110%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Hidratação Padrão</h3>
+                        <span class="service-card-duration">⏱️ 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 80,00</div>
+                    <p class="service-card-desc">Hidratação e revitalização profunda dos fios, restaurando a maciez, a nutrição e o brilho natural.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Hidrata%C3%A7%C3%A3o+Padr%C3%A3o+%28R%24+80%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Descoloração Global</h3>
+                        <span class="service-card-duration">⏱️ 3h</span>
+                    </div>
+                    <div class="service-card-price"><span class="price-from">A partir de</span>R$ 300,00</div>
+                    <p class="service-card-desc">Descoloração global profissional e tom platinado impecável com proteção da fibra capilar (Consultar orçamento).</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+consultar+or%C3%A7amento+para+Descolora%C3%A7%C3%A3o+Global" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="tratamentos">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Luzes</h3>
+                        <span class="service-card-duration">⏱️ 3h</span>
+                    </div>
+                    <div class="service-card-price"><span class="price-from">A partir de</span>R$ 300,00</div>
+                    <p class="service-card-desc">Descoloração e tonalização de luzes masculinas para mechas definidas e contraste refinado (Consultar orçamento).</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+consultar+or%C3%A7amento+para+Luzes" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ESTÉTICA FACIAL -->
+            <article class="service-card" data-category="estetica">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Sobrancelha</h3>
+                        <span class="service-card-duration">⏱️ 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 35,00</div>
+                    <p class="service-card-desc">Design e alinhamento de sobrancelha masculina feita na navalha para valorizar o olhar.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Sobrancelha+%28R%24+35%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="estetica">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Depilação Nariz (Cera)</h3>
+                        <span class="service-card-duration">⏱️ 15min</span>
+                    </div>
+                    <div class="service-card-price">R$ 40,00</div>
+                    <p class="service-card-desc">Depilação higiênica e indolores de narinas com cera especial para homens.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Depila%C3%A7%C3%A3o+de+Nariz+%28R%24+40%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card" data-category="estetica">
+                <div class="service-card-top">
+                    <div class="service-card-header">
+                        <h3 class="service-card-title">Depilação Facial (Nariz e Orelhas)</h3>
+                        <span class="service-card-duration">⏱️ 20min</span>
+                    </div>
+                    <div class="service-card-price">R$ 60,00</div>
+                    <p class="service-card-desc">Depilação facial completa com cera para remoção rápida e limpa de pelos indesejados no nariz e nas orelhas.</p>
+                </div>
+                <div class="service-card-actions">
+                    <a href="schedule.html" class="service-btn-book">Agendar no Trinks</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+gostaria+de+agendar+Depila%C3%A7%C3%A3o+Facial+Nariz+e+Orelhas+%28R%24+60%2C00%29" target="_blank" rel="noopener noreferrer" class="service-btn-wsp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- SEÇÃO DE PRODUTOS PROFISSIONAIS -->
+        <div style="margin-top: 40px;">
+            <div class="section-header">
+                <span class="section-tag">Linha Exclusiva de Manutenção</span>
+                <h2 class="section-main-title">Produtos Profissionais no Lounge</h2>
+            </div>
+            <div class="products-grid" style="margin-top: 24px;">
+                <figure class="card card-pomada" role="img" aria-label="Foto de uma embalagem de pomada em pó Baboon">
+                    <h2>POMADA EM PÓ BABOON</h2>
+                    <a href="schedule.html" class="cardbot" aria-label="Comprar pomada em pó Baboon">
+                        <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                        Adquirir na Barbearia
+                    </a>
+                </figure>
+
+                <figure class="card card-keune" role="img" aria-label="Foto de um kit de tratamento capilar Keune">
+                    <h2>KIT TRATAMENTO KEUNE</h2>
+                    <a href="schedule.html" class="cardbot" aria-label="Comprar kit Keune">
+                        <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                        Adquirir na Barbearia
+                    </a>
+                </figure>
+
+                <figure class="card card-baboon" role="img" aria-label="Foto de latas de gel modelador Baboon">
+                    <h2>GEL MODELADOR BABOON</h2>
+                    <a href="schedule.html" class="cardbot" aria-label="Comprar gel Baboon">
+                        <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                        Adquirir na Barbearia
+                    </a>
+                </figure>
+            </div>
         </div>
     </main>
 
@@ -152,6 +516,7 @@
 
     <script src="assets/js/a11y.js"></script>
     <script src="assets/js/store-status.js"></script>
+    <script src="assets/js/service-filter.js"></script>
 </body>
 
 </html>
