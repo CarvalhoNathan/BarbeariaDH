@@ -38,6 +38,9 @@
         <!-- HERO SECTION (SPLIT 2 COLUNAS) -->
         <section class="hero-section glass-card" aria-label="Apresentação da Barbearia DH">
             <div class="hero-content">
+                <div style="margin-bottom: 14px;">
+                    <span class="store-status-badge is-open"><span class="pulse-dot"></span> <span>Verificando horário...</span></span>
+                </div>
                 <h1 class="hero-title">
                     Sua imagem é a sua <span class="highlight-gold">Assinatura.</span>
                 </h1>
@@ -221,11 +224,104 @@
             </div>
         </section>
 
+        <!-- HAIRCUT STYLE SHOWCASE GALLERY SECTION -->
+        <section id="galeria-estilos" aria-labelledby="gallery-title-heading">
+            <div class="section-header">
+                <span class="section-tag">Nossa Arte & Estilos</span>
+                <h2 id="gallery-title-heading" class="section-main-title">Galeria de Cortes & Transformações</h2>
+            </div>
+            
+            <!-- Category Filter Tabs -->
+            <div class="gallery-filter-tabs" role="tablist" aria-label="Filtro de estilos de corte">
+                <button class="gallery-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Todos os Estilos</button>
+                <button class="gallery-filter-btn" data-filter="degrade" role="tab" aria-selected="false">Degradê / Fade</button>
+                <button class="gallery-filter-btn" data-filter="oldmoney" role="tab" aria-selected="false">Old Money & Tesoura</button>
+                <button class="gallery-filter-btn" data-filter="barba" role="tab" aria-selected="false">Barba Terapia VIP</button>
+                <button class="gallery-filter-btn" data-filter="kids" role="tab" aria-selected="false">Corte Infantil</button>
+            </div>
+
+            <!-- Haircut Cards Grid -->
+            <div class="haircut-cards-grid">
+                <article class="haircut-card" data-category="degrade">
+                    <div class="haircut-img-wrapper">
+                        <img src="assets/images/haircut_fade.jpg" alt="Corte Degradê Fade Skin com alinhamento de barba na Barbearia DH">
+                        <span class="haircut-badge-tag">Degradê / Fade</span>
+                    </div>
+                    <div class="haircut-card-body">
+                        <div>
+                            <h3 class="haircut-title">Degradê Moderno (Skin Fade)</h3>
+                            <p class="haircut-desc">Transição impecável na navalha com linhas marcadas e acabamento de precisão com shaver.</p>
+                        </div>
+                        <a href="schedule.html" class="haircut-action-btn">Agendar Este Estilo ✂️</a>
+                    </div>
+                </article>
+
+                <article class="haircut-card" data-category="oldmoney">
+                    <div class="haircut-img-wrapper">
+                        <img src="assets/images/haircut_old_money.jpg" alt="Corte Old Money a Tesoura clássico e elegante na Barbearia DH">
+                        <span class="haircut-badge-tag">Old Money</span>
+                    </div>
+                    <div class="haircut-card-body">
+                        <div>
+                            <h3 class="haircut-title">Old Money & Tesoura Clássica</h3>
+                            <p class="haircut-desc">Modelagem artesanal 100% à tesoura com alinhamento e finalização com pomada Keune.</p>
+                        </div>
+                        <a href="schedule.html" class="haircut-action-btn">Agendar Este Estilo ✂️</a>
+                    </div>
+                </article>
+
+                <article class="haircut-card" data-category="barba">
+                    <div class="haircut-img-wrapper">
+                        <img src="assets/images/barba_terapia.jpg" alt="Barba Terapia VIP com toalha quente e óleos essenciais na Barbearia DH">
+                        <span class="haircut-badge-tag">Barba Terapia</span>
+                    </div>
+                    <div class="haircut-card-body">
+                        <div>
+                            <h3 class="haircut-title">Barba Terapia VIP & Rituais</h3>
+                            <p class="haircut-desc">Modelagem com navalhete, toalha quente vaporizada, óleos nutritivos e hidratação profunda.</p>
+                        </div>
+                        <a href="schedule.html" class="haircut-action-btn">Agendar Este Estilo ✂️</a>
+                    </div>
+                </article>
+
+                <article class="haircut-card" data-category="kids">
+                    <div class="haircut-img-wrapper">
+                        <img src="assets/images/haircut_kids.jpg" alt="Corte Infantil atencioso e divertido na Barbearia DH">
+                        <span class="haircut-badge-tag">Infantil</span>
+                    </div>
+                    <div class="haircut-card-body">
+                        <div>
+                            <h3 class="haircut-title">Corte Infantil Especial</h3>
+                            <p class="haircut-desc">Atendimento paciente, ambiente divertido e cortes modernos para crianças de todas as idades.</p>
+                        </div>
+                        <a href="schedule.html" class="haircut-action-btn">Agendar Este Estilo ✂️</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <!-- TESTIMONIALS SECTION -->
-        <section aria-labelledby="testimonials-title-heading">
+        <section id="avaliacoes-google" aria-labelledby="testimonials-title-heading">
             <div class="section-header">
                 <span class="section-tag">Depoimentos Reais</span>
-                <h2 id="testimonials-title-heading" class="section-main-title">O Que Dizem Nossos Clientes</h2>
+                <h2 id="testimonials-title-heading" class="section-main-title">O Que Dizem Nossos Clientes no Google</h2>
+            </div>
+
+            <!-- Official Google Rating Header Card -->
+            <div class="google-reviews-header-card">
+                <div class="google-brand-badge">
+                    <div class="google-g-icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.29v3.15C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.29C.47 8.21 0 10.05 0 12s.47 3.79 1.29 5.42l3.99-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.58l3.99 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+                    </div>
+                    <div>
+                        <div class="google-rating-score">4.9 / 5.0</div>
+                        <div class="google-stars">★★★★★</div>
+                        <div class="google-review-count">Avaliações Verificadas no Google Maps (Santos/Gonzaga)</div>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Barbearia+DH+Gentlemen+Club+Santos" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass" style="font-size: 0.88rem;">
+                    <span>Ver Todas no Google Maps ↗</span>
+                </a>
             </div>
             <div class="testimonials-grid">
                 <article class="testimonial-card glass-card">
@@ -414,6 +510,8 @@
     </footer>
 
     <script src="assets/js/a11y.js"></script>
+    <script src="assets/js/store-status.js"></script>
+    <script src="assets/js/gallery-filter.js"></script>
 </body>
 
 </html>
