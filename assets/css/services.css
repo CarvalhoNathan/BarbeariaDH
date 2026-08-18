@@ -223,7 +223,7 @@ main.services-container {
     font-size: 0.9rem;
     color: var(--color-text-muted);
     line-height: 1.5;
-    margin: 0 0 18px;
+    margin: 0 0 6px;
 }
 
 .service-card-actions {
