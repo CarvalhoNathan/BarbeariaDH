@@ -34,4 +34,53 @@ document.addEventListener("DOMContentLoaded", function () {
             e.target.value = formatado;
         });
     }
+    // 4. Lógica da Janela Flutuante (Pop-up Oficial Trinks - Padrão Widget /framebusca)
+    const btnTrinksPopup = document.getElementById("btn-trinks-popup");
+    if (btnTrinksPopup) {
+        btnTrinksPopup.addEventListener("click", function () {
+            const width = Math.min(980, window.innerWidth - 40);
+            const height = Math.min(640, window.innerHeight - 40);
+            const left = Math.max(0, (window.innerWidth - width) / 2 + window.screenX);
+            const top = Math.max(0, (window.innerHeight - height) / 2 + window.screenY);
+
+            const url = "https://www.trinks.com/dh-gentlemen-club/framebusca";
+            window.open(
+                url,
+                "AgendamentoTrinksDH",
+                `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes,status=no`
+            );
+        });
+    }
+
+    // 5. Lógica de Tela Cheia Opcional para a Prévia do Trinks
+    const btnFullscreen = document.getElementById("btn-fullscreen");
+    const trinksContainer = document.getElementById("trinks-container");
+    const fullscreenText = document.getElementById("fullscreen-text");
+
+    if (trinksContainer) {
+        const toggleFullscreen = (forceState) => {
+            const isFull = typeof forceState === "boolean" 
+                ? trinksContainer.classList.toggle("is-fullscreen", forceState)
+                : trinksContainer.classList.toggle("is-fullscreen");
+
+            document.body.style.overflow = isFull ? "hidden" : "";
+
+            if (fullscreenText) {
+                fullscreenText.textContent = isFull ? "Sair da Tela Cheia ✕" : "Expandir Tela Cheia";
+            }
+        };
+
+        if (btnFullscreen) {
+            btnFullscreen.addEventListener("click", function () {
+                toggleFullscreen();
+            });
+        }
+
+        // Fechar ao pressionar a tecla Escape
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && trinksContainer.classList.contains("is-fullscreen")) {
+                toggleFullscreen(false);
+            }
+        });
+    }
 });

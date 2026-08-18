@@ -32,60 +32,82 @@
         </nav>
     </header>
 
-    <main id="main-content" class="schedule-container container">
-        <div class="schedule-card glass-card">
+       <main id="main-content" class="schedule-container container">
+        <div class="schedule-wrapper">
             <div class="section-header">
-                <span class="section-tag">Agendamento Online</span>
-                <h1 class="section-main-title">Reserve Seu Horário</h1>
+                <span class="section-tag">Agendamento & Reservas</span>
+                <h1 class="section-main-title">Escolha Como Deseja Agendar</h1>
+                <p class="schedule-subtitle">Reserve seu horário em tempo real pelo sistema Trinks ou fale diretamente com nossa equipe no WhatsApp.</p>
             </div>
 
-            <form action="success.html" class="schedule-form">
-                <div class="form-group">
-                    <label for="nome" class="obrigatorio">Seu nome completo:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome aqui">
+            <!-- CANAIS PRINCIPAIS DE ACESSO DIRETO (GRID 2 CARDS) -->
+            <div class="primary-channels-grid">
+                <!-- CARD 1: SISTEMA TRINKS (POP-UP FLUTUANTE EM CIMA DO SITE - OFICIAL TRINKS) -->
+                <article class="primary-channel-card trinks-card-glow glass-card">
+                    <div class="channel-card-content">
+                        <span class="channel-badge gold-badge">Widget Oficial Trinks</span>
+                        <h2 class="channel-title">Agendar pelo Trinks</h2>
+                        <p class="channel-desc">Abre a janela de agendamento flutuante em tempo real por cima da página para escolher barbeiro e horário.</p>
+                    </div>
+                    <button type="button" id="btn-trinks-popup" class="btn-primary-glow btn-full" aria-label="Abrir janela flutuante de agendamento Trinks">
+                        <span class="svg-icon" aria-hidden="true" style="margin-right: 6px;">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </span>
+                        <span>Abrir Agendamento Trinks</span>
+                    </button>
+                </article>
+
+                <!-- CARD 2: WHATSAPP DIRETO -->
+                <article class="primary-channel-card whatsapp-card-glow glass-card">
+                    <div class="channel-card-content">
+                        <span class="channel-badge green-badge">Atendimento Rápido</span>
+                        <h2 class="channel-title">Agendar pelo WhatsApp</h2>
+                        <p class="channel-desc">Prefere agendar pelo chat ou tirar dúvidas diretamente com o barbeiro? Clique e envie sua mensagem.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+tudo+bem%3F+Gostaria+de+marcar+um+hor%C3%A1rio.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-glow btn-full" aria-label="Abrir conversa no WhatsApp para agendar horário">
+                        <span class="svg-icon" aria-hidden="true" style="margin-right: 6px;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+                        </span>
+                        <span>Agendar via WhatsApp</span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- SEÇÃO OPCIONAL: EMBEDDED IFRAME PREVIEW (ENDPOINT /framebusca) -->
+            <article class="booking-channel-card trinks-channel glass-card" id="trinks-container">
+                <div class="trinks-header">
+                    <div class="trinks-header-main">
+                        <div class="trinks-title-row">
+                            <span class="status-dot"></span>
+                            <h2>Visualização do Widget Trinks na Página</h2>
+                        </div>
+                        <p class="trinks-subtitle">Você também pode utilizar o widget integrado abaixo na página ou expandir em tela cheia.</p>
+                    </div>
+                    <div class="trinks-actions">
+                        <button type="button" id="btn-fullscreen" class="btn-secondary-glass btn-sm" aria-label="Alternar modo tela cheia para a visualização">
+                            <span class="svg-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                            </span>
+                            <span id="fullscreen-text">Expandir Tela Cheia</span>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="servico" class="obrigatorio">Tipo de serviço desejado:</label>
-                    <select id="servico" name="servico" required>
-                        <option value="" disabled selected>Selecione um serviço...</option>
-                        <option value="corte-signature">Corte Signature DH (R$ 60)</option>
-                        <option value="barboterapia">Barboterapia Completa (R$ 50)</option>
-                        <option value="combo-gentlemen">Combo Gentlemen Club - Corte + Barba (R$ 100)</option>
-                        <option value="masculino">Corte Masculino Tradicional</option>
-                    </select>
+                <div class="trinks-iframe-wrapper">
+                    <iframe 
+                        src="https://www.trinks.com/dh-gentlemen-club/"
+                        title="Agendamento Online Barbearia DH Gentlemen Club no Trinks Widget"
+                        frameborder="0"
+                        width="100%"
+                        height="650"
+                        allowfullscreen
+                        allow="geolocation; microphone; camera; payment; auto-play; clipboard-write; encrypted-media"
+                        referrerpolicy="origin-when-cross-origin"
+                        sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-top-navigation-by-user-activation"
+                        loading="lazy">
+                    </iframe>
                 </div>
-
-                <div class="form-group">
-                    <label for="telefone" class="obrigatorio">Telefone / WhatsApp:</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(13) 98123-4567">
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="obrigatorio">Seu E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="data" class="obrigatorio">Data desejada:</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="horario" class="obrigatorio">Horário disponível:</label>
-                    <select id="horario" name="horario" required></select>
-                </div>
-
-                <div class="form-group">
-                    <label for="observacao">Observações ou preferências (Opcional):</label>
-                    <textarea id="observacao" name="observacao" rows="3" placeholder="Ex: Preferência por degradê navalhado, tesoura no topo, etc."></textarea>
-                </div>
-
-                <button type="submit" id="botao" class="btn-primary-glow">
-                    <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                    <span>CONFIRMAR AGENDAMENTO</span>
-                </button>
-            </form>
+            </article>
         </div>
     </main>
 
