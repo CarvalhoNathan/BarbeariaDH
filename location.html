@@ -53,27 +53,56 @@
                     <p>
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 
                         <strong>Endereço:</strong><br> 
-                        Rua Governador Pedro de Toledo, 89, Gonzaga, Santos, SP - 11045-550<br>
-                        <a href="https://maps.google.com/?q=Rua+Governador+Pedro+de+Toledo,+89,+Gonzaga,+Santos+-+SP,+11045-550" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); font-weight: 700; text-decoration: underline; display: inline-block; margin-top: 4px;">Ver no mapa →</a>
+                        <span id="endereco-texto">Rua Governador Pedro de Toledo, 89 - Loja 04 (Galeria Gonzaga), Santos/SP - CEP 11045-550</span><br>
+                        <button type="button" id="btn-copy-address" class="btn-secondary-glass btn-sm" style="margin-top: 8px; font-size: 0.8rem; padding: 6px 12px;">
+                            📋 Copiar Endereço
+                        </button>
                     </p>
-                    <p>
+
+                    <!-- BOTÕES DE ROTAS GPS -->
+                    <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <strong style="font-size: 0.88rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.5px;">Navegar pelo GPS:</strong>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <a href="https://maps.google.com/?q=Rua+Governador+Pedro+de+Toledo,+89,+Gonzaga,+Santos+-+SP,+11045-550" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass btn-sm" style="font-size: 0.82rem; padding: 6px 12px;">
+                                🗺️ Google Maps
+                            </a>
+                            <a href="https://waze.com/ul?q=Rua+Governador+Pedro+de+Toledo+89+Gonzaga+Santos" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass btn-sm" style="font-size: 0.82rem; padding: 6px 12px;">
+                                🚘 Waze
+                            </a>
+                            <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=Rua%20Governador%20Pedro%20de%20Toledo%2C%2089%20-%20Gonzaga%2C%20Santos%20-%20SP&dropoff[latitude]=-23.9692338&dropoff[longitude]=-46.3295286" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass btn-sm" style="font-size: 0.82rem; padding: 6px 12px;">
+                                🚕 Uber
+                            </a>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 16px;">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 
                         <strong>Horário de Funcionamento:</strong>
                     </p>
                     <ul style="list-style: none; padding-left: 10px; line-height: 1.8;">
                         <li>Domingo a Segunda-Feira: <span style="opacity: 0.7;">Fechado</span></li>
                         <li>Terça-Feira a Sexta-Feira: <strong>09:00 às 20:00</strong></li>
-                        <li>Sábado: <strong>10:00 às 20:00</strong></li>
+                        <li>Sábado: <strong>09:00 às 19:00</strong></li>
                     </ul>
                     <p>
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 
                         <strong>Telefone / WhatsApp:</strong><br> 
                         <a href="https://wa.me/5513981370797" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 700;">(13) 98137-0797</a>
                     </p>
+                    <p style="margin-top: 8px;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> 
+                        <strong>Instagram Oficial:</strong><br> 
+                        <a href="https://instagram.com/barbeariadh_santos" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); font-weight: 700; text-decoration: underline;">@barbeariadh_santos</a>
+                    </p>
+                    <p style="margin-top: 12px; background: rgba(249, 127, 44, 0.08); border-left: 3px solid var(--color-accent); padding: 10px 14px; border-radius: 6px; font-size: 0.88rem; line-height: 1.5;">
+                        <strong>📍 Ponto de Referência:</strong> Próximo à Praia do Gonzaga no <strong>Canal 3</strong>.<br>
+                        <strong>⏱️ Pontualidade:</strong> Tolerância máxima de 10 minutos de atraso.<br>
+                        <strong>🚗 Facilidades:</strong> Estacionamento Grátis, Wi-Fi e Bar Cortesia.
+                    </p>
                 </div>
-                <div class="location-badge">
+                <div class="location-badge" style="margin-top: 14px;">
                     <span class="status-dot" style="display: inline-block; vertical-align: middle; margin-right: 6px;" aria-hidden="true"></span>
-                    <span>Estacionamento & Fácil Acesso no Gonzaga</span>
+                    <span>Atendimentos Adulto & Infantil com Horário Marcado</span>
                 </div>
                 <a href="schedule.html" class="btn-primary-glow" style="margin-top: 10px;">
                     <span class="svg-icon" style="margin-right: 6px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
@@ -82,6 +111,24 @@
             </aside>
         </div>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnCopy = document.getElementById("btn-copy-address");
+            if (btnCopy) {
+                btnCopy.addEventListener("click", function() {
+                    const addressText = "Rua Governador Pedro de Toledo, 89, Gonzaga, Santos, SP - 11045-550";
+                    navigator.clipboard.writeText(addressText).then(() => {
+                        if (window.showToast) {
+                            window.showToast("Endereço copiado para a área de transferência!");
+                        } else {
+                            alert("Endereço copiado!");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -104,13 +151,21 @@
                 <div>
                     <h3 class="footer-heading">Contato & Horários</h3>
                     <div class="footer-contact-info">
-                        <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> R. Gov. Pedro de Toledo, 89 - Gonzaga, Santos/SP</p>
-                        <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Ter a Sex: 09h às 20h | Sáb: 10h às 20h</p>
+                        <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> R. Gov. Pedro de Toledo, 89 - Loja 04 (Galeria Gonzaga), Santos/SP</p>
+                        <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Ter a Sex: 09h às 20h | Sáb: 09h às 19h</p>
                         <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Tel / WhatsApp: (13) 98137-0797</p>
+                        <p><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2.2" style="vertical-align: sub; margin-right: 6px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram: <a href="https://instagram.com/barbeariadh_santos" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); font-weight: 700; text-decoration: underline;">@barbeariadh_santos</a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
+                <div class="footer-payments" aria-label="Formas de pagamento aceitas">
+                    <span class="payment-badge">💸 Pix</span>
+                    <span class="payment-badge">💳 Crédito & Débito</span>
+                    <span class="payment-badge">🍎 Apple Pay</span>
+                    <span class="payment-badge">📱 Google Pay</span>
+                    <span class="payment-badge">💵 Dinheiro</span>
+                </div>
                 <p>&copy; 2016 - 2026 Barbearia DH Gentlemen Club. Todos os direitos reservados.</p>
             </div>
         </div>

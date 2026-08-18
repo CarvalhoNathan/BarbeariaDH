@@ -413,5 +413,62 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     initVLibras();
+
+    // ==========================================
+    // 5. WIDGET FLUTUANTE DO WHATSAPP (GLOBAL)
+    // ==========================================
+    const injectWhatsAppFloat = () => {
+        const waLink = document.createElement("a");
+        waLink.href = "https://api.whatsapp.com/send/?phone=5513981370797&text=Ol%C3%A1%2C+tudo+bem%3F+Gostaria+de+marcar+um+hor%C3%A1rio.&type=phone_number&app_absent=0";
+        waLink.target = "_blank";
+        waLink.rel = "noopener noreferrer";
+        waLink.className = "whatsapp-float-widget";
+        waLink.setAttribute("aria-label", "Falar com a Barbearia DH pelo WhatsApp");
+        waLink.innerHTML = `
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l.399.636-1.16 4.234 4.341-1.138.563.335z"/></svg>
+            <span class="whatsapp-float-tooltip">Dúvidas? Fale no WhatsApp 💬</span>
+        `;
+        document.body.appendChild(waLink);
+    };
+
+    injectWhatsAppFloat();
+
+    // ==========================================
+    // 6. HELPER GLOBAL DE TOAST NOTIFICATION
+    // ==========================================
+    window.showToast = function(message) {
+        let toast = document.querySelector(".toast-notification");
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.className = "toast-notification";
+            document.body.appendChild(toast);
+        }
+
+        toast.innerHTML = `<span>📋</span> <span>${message}</span>`;
+        toast.classList.add("is-show");
+
+        setTimeout(() => {
+            toast.classList.remove("is-show");
+        }, 3000);
+    };
+
+    // ==========================================
+    // 7. LÓGICA DO FAQ ACCORDION
+    // ==========================================
+    const faqQuestions = document.querySelectorAll(".faq-question");
+    faqQuestions.forEach(btn => {
+        btn.addEventListener("click", function() {
+            const faqItem = this.parentElement;
+            const isOpen = faqItem.classList.contains("is-open");
+
+            // Fechar todos os outros
+            document.querySelectorAll(".faq-item").forEach(item => {
+                if (item !== faqItem) item.classList.remove("is-open");
+            });
+
+            // Alternar o atual
+            faqItem.classList.toggle("is-open", !isOpen);
+        });
+    });
 });
 
