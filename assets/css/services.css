@@ -113,9 +113,19 @@ main.services-container {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
+    cursor: default;
 }
 
-/* Efeito de Varredura de Luz (Shimmer Sweep) no Hover */
+.service-card * {
+    cursor: default;
+}
+
+.service-card a,
+.service-card button {
+    cursor: pointer;
+}
+
+/* Efeito de Varredura de Luz (Shimmer Sweep) Apenas na Entrada (Hover) */
 .service-card::before {
     content: "";
     position: absolute;
@@ -123,14 +133,15 @@ main.services-container {
     left: -100%;
     width: 60%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
     transform: skewX(-25deg);
-    transition: left 0.75s ease;
+    transition: none; /* Sem transição ao retirar o mouse (retorno instantâneo) */
     pointer-events: none;
 }
 
 .service-card:hover::before {
     left: 140%;
+    transition: left 1.35s cubic-bezier(0.16, 1, 0.3, 1); /* Anima a luz passando SOMENTE na ida */
 }
 
 .service-card:hover {
@@ -172,11 +183,24 @@ main.services-container {
     white-space: nowrap;
     border: 1px solid rgba(249, 127, 44, 0.25);
     flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card-duration svg {
     flex-shrink: 0;
     display: block;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .service-card-duration {
+    background: rgba(249, 127, 44, 0.22);
+    border-color: rgba(249, 127, 44, 0.5);
+    box-shadow: 0 0 12px rgba(249, 127, 44, 0.3);
+    transform: scale(1.04);
+}
+
+.service-card:hover .service-card-duration svg {
+    transform: rotate(20deg) scale(1.15);
 }
 
 .service-card-price {
@@ -243,8 +267,15 @@ main.services-container {
     border: 1px solid rgba(34, 197, 94, 0.35);
     color: #22c55e !important;
     text-decoration: none;
-    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
     flex-shrink: 0;
+}
+
+.service-btn-wsp:hover {
+    transform: translateY(-2px) scale(1.08);
+    background: rgba(34, 197, 94, 0.3);
+    border-color: #22c55e;
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
 }
 
 .service-btn-wsp svg {
