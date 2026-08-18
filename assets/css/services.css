@@ -40,15 +40,15 @@ main.services-container {
 }
 
 .card-pomada {
-    background-image: url('../img/pomada-em-po.jpg');
+    background-image: url('../images/pomada-em-po.jpg');
 }
 
 .card-keune {
-    background-image: url('../img/kit-keune.jpg');
+    background-image: url('../images/kit-keune.jpg');
 }
 
 .card-baboon {
-    background-image: url('../img/gel-baboon.jpg');
+    background-image: url('../images/gel-baboon.jpg');
 }
 
 .card::before {
