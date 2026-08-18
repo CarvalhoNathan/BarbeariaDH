@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (timeInMinutes < 540) {
                 nextOpenMsg = "Abre hoje às 09h";
             } else {
-                nextOpenMsg = day === 5 ? "Abre amanhã (Sáb) às 09h" : "Abre amanhã às 09h";
+                nextOpenMsg = day === 5 ? "Abre amanhã (Sáb) às 10h" : "Abre amanhã às 09h";
             }
         } else if (day === 6) {
-            // Saturday: 09:00 (540m) - 19:00 (1140m)
-            if (timeInMinutes >= 540 && timeInMinutes < 1140) {
+            // Saturday: 10:00 (600m) - 20:00 (1200m)
+            if (timeInMinutes >= 600 && timeInMinutes < 1200) {
                 isOpen = true;
-                closingTime = "19h";
-            } else if (timeInMinutes < 540) {
-                nextOpenMsg = "Abre hoje às 09h";
+                closingTime = "20h";
+            } else if (timeInMinutes < 600) {
+                nextOpenMsg = "Abre hoje às 10h";
             } else {
                 nextOpenMsg = "Abre terça às 09h";
             }
