@@ -109,8 +109,8 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -118,10 +118,20 @@ nav {
     position: relative;
 }
 
-nav .left,
+nav .left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 nav .right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 36px;
     list-style: none;
     margin: 0;
@@ -195,6 +205,11 @@ nav a.select::after {
 }
 
 @media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .hamburger {
         display: block;
     }
@@ -304,6 +319,17 @@ nav a.select::after {
     color: #ffffff !important;
 }
 
+/* CTAs de Cards com glow suavizado para dar prioridade ao CTA principal do Hero */
+.service-card .btn-primary-glow {
+    box-shadow: 0 4px 14px rgba(249, 127, 44, 0.25);
+    font-size: 0.95rem;
+    padding: 12px 20px;
+}
+
+.service-card .btn-primary-glow:hover {
+    box-shadow: 0 6px 20px rgba(249, 127, 44, 0.45);
+}
+
 /* Botão Glass */
 .btn-secondary-glass {
     display: inline-flex;
@@ -358,7 +384,7 @@ nav a.select::after {
 main.home-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 56px;
     padding: 30px 20px 60px;
 }
 
@@ -787,16 +813,19 @@ main.home-container {
 .link-styled {
     color: var(--color-accent);
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(249, 127, 44, 0.5);
     font-size: 1.05rem;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .link-styled:hover {
     color: #ffffff;
+    text-decoration-color: #ffffff;
     transform: translateX(4px);
 }
 
@@ -854,7 +883,8 @@ main.home-container {
 
 .author-tag {
     font-size: 0.8rem;
-    color: var(--color-accent);
+    color: #ffb07c;
+    font-weight: 600;
 }
 
 /* QUICK SCHEDULE BANNER */
@@ -1455,6 +1485,33 @@ html.a11y-pause-animations *::after {
     top: 30% !important;
     bottom: auto !important;
     z-index: 99999 !important;
+}
+
+/* Evitar sobreposição de painéis flutuantes (A11y e VLibras) sobre conteúdo em telas menores que 1400px */
+@media (max-width: 1400px) {
+    .a11y-fab-container {
+        top: auto;
+        bottom: 80px;
+        right: 16px;
+        transform: none;
+    }
+    
+    .a11y-menu {
+        bottom: 50px;
+        right: 0;
+        top: auto;
+        transform: translateY(10px);
+    }
+    
+    .a11y-menu.is-active {
+        transform: translateY(0);
+    }
+
+    [vw] {
+        top: auto !important;
+        bottom: 20px !important;
+        right: 16px !important;
+    }
 }
 
 /* 10. MEDIA QUERIES GERAIS */
