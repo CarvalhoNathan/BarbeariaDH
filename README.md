@@ -2,18 +2,14 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/DEMO-Ver%20Site%20Online-22c55e?style=for-the-badge&logo=google-chrome&logoColor=white)](https://carvalhonathan.github.io/BarbeariaDH/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![WCAG 2.1 AAA](https://img.shields.io/badge/WCAG%202.1-AAA-success?style=for-the-badge)
 ![AOS Animation](https://img.shields.io/badge/AOS-Scroll%20Reveal-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)
 
 </div>
-
----
-
-> 🚀 **Demonstração Online:** Acesse o projeto ao vivo no GitHub Pages: **[https://carvalhonathan.github.io/BarbeariaDH/](https://carvalhonathan.github.io/BarbeariaDH/)**
 
 ---
 
